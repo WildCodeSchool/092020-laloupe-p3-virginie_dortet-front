@@ -1,61 +1,102 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  makeStyles,
-  IconButton,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { Sling as Hamburger } from "hamburger-react";
 import "./NavBar.scss";
 
-const useStyles = makeStyles((theme) => ({
-  offset: theme.mixins.toolbar,
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-}));
+export default function NavBar() {
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [largeur, setLargeur] = useState(window.innerWidth);
 
-const NavBar = () => {
-  const classes = useStyles();
+  const toggleNavSmallScreen = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setLargeur(window.innerWidth);
+      if (window.innerWidth > 500) {
+        setToggleMenu(false);
+      }
+    };
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
+
   return (
-    <div>
-      <AppBar>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            arial-label="menu"
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6">
-            <Link to="/auteure">Auteure</Link>
-          </Typography>
-          <Typography variant="h6">
-            <Link to="/livres">Livres</Link>
-          </Typography>
-          <Typography variant="h6">
-            <Link to="/partenariats">Partenaires</Link>
-          </Typography>
-          <Typography variant="h6">
-            <Link to="/actualites">Actus</Link>
-          </Typography>
-          <Typography variant="h6">
-            <Link to="/ateliers">Mes ateliers</Link>
-          </Typography>
-          <Typography variant="h6">
-            <Link to="/precommande">Précommande</Link>
-          </Typography>
-          <Typography variant="h6">
-            <Link to="/contact">Contact</Link>
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <div className={classes.offset} />
-    </div>
+    <nav>
+      {(toggleMenu || largeur > 500) && (
+        <ul className="liste-nav">
+          <li className="items-nav">
+            <Link
+              to="/"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Auteure
+            </Link>
+          </li>
+          <li className="items-nav">
+            <Link
+              to="/livres"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Livres
+            </Link>
+          </li>
+          <li className="items-nav">
+            <Link
+              to="/partenaires"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Partenaires
+            </Link>
+          </li>
+          <li className="items-nav">
+            <Link
+              to="/actualites"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Actualités
+            </Link>
+          </li>
+          <li className="items-nav">
+            <Link
+              to="/ateliers"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Ateliers
+            </Link>
+          </li>
+          <li className="items-nav">
+            <Link
+              to="/precommande"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Précommande
+            </Link>
+          </li>
+          <li className="items-nav">
+            <Link
+              to="/contact"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      )}
+      <button type="button" onClick={toggleNavSmallScreen} className="btn-nav">
+        <Hamburger />
+      </button>
+    </nav>
   );
-};
-
-export default NavBar;
+}

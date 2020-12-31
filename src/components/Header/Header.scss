@@ -1,0 +1,28 @@
+.welcome-image {
+    background-image: url("../../../public/welcomeimage.jpg");
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+.welcome-image h1 {
+    text-align: left;
+    font-family: "Patrick Hand", cursive;
+    color:#FFE7CB;
+    background-color:#FEB250;
+    padding: 8px;
+    width: 700px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .welcome-image h1 {
+        width: 70%;
+        font-size: 20px;
+    }
+}
