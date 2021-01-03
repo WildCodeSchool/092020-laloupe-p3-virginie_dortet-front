@@ -17,14 +17,16 @@ function App() {
       <Router>
         <Header />
         <NavBar />
+        <Author />
+        <Book />
+        <Funding />
+        <News />
+        <Workshops />
+        <Preorder />
+        <ContactForm />
+
         <Switch>
-          <Route exact path="/" component={Author} />
-          <Route path="/livres" component={Book} />
-          <Route path="/partenaires" component={Funding} />
-          <Route path="/actualites" component={News} />
-          <Route path="/ateliers" component={Workshops} />
-          <Route path="/precommande" component={Preorder} />
-          <Route path="/contact" component={ContactForm} />
+          <Route exact path="/" />
         </Switch>
       </Router>
     </div>
@@ -32,5 +34,3 @@ function App() {
 }
 
 export default App;
-
-// React.createRef pour naviguer d'une section à une autre
