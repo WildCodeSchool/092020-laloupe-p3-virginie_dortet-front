@@ -17,16 +17,15 @@ function App() {
       <Router>
         <Header />
         <NavBar />
-        <Author />
-        <Book />
-        <Funding />
-        <News />
-        <Workshops />
-        <Preorder />
-        <ContactForm />
 
         <Switch>
-          <Route exact path="/" />
+          <Route exact path="/" component={Author} />
+          <Route exact path="/livres" component={Book} />
+          <Route exact path="/partenaires" component={Funding} />
+          <Route exact path="/actualites" component={News} />
+          <Route exact path="/ateliers" component={Workshops} />
+          <Route exact path="/precommande" component={Preorder} />
+          <Route exact path="/contact" component={ContactForm} />
         </Switch>
       </Router>
     </div>

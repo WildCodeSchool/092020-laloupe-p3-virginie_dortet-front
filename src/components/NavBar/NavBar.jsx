@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Sling as Hamburger } from "hamburger-react";
 import "./NavBar.scss";
 
@@ -29,67 +30,67 @@ export default function NavBar() {
       {(toggleMenu || largeur > 500) && (
         <ul className="liste-nav">
           <li className="items-nav">
-            <a
-              href="#author"
+            <Link
+              to="/auteure"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >
               Auteure
-            </a>
+            </Link>
           </li>
           <li className="items-nav">
-            <a
-              href="#book"
+            <Link
+              to="/livres"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >
               Livres
-            </a>
+            </Link>
           </li>
           <li className="items-nav">
-            <a
-              href="#funding"
+            <Link
+              to="/partenaires"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >
               Partenaires
-            </a>
+            </Link>
           </li>
           <li className="items-nav">
-            <a
-              href="#news"
+            <Link
+              to="/actualites"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >
               Actualités
-            </a>
+            </Link>
           </li>
           <li className="items-nav">
-            <a
-              href="#workshops"
+            <Link
+              to="/ateliers"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >
               Ateliers
-            </a>
+            </Link>
           </li>
           <li className="items-nav">
-            <a
-              href="#preorder"
+            <Link
+              to="/precommande"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >
               Précommande
-            </a>
+            </Link>
           </li>
           <li className="items-nav">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       )}
