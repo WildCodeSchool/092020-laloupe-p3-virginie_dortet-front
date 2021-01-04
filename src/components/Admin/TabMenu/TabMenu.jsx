@@ -1,24 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./TabMenu.scss";
 
 const SideBarData = [
   {
     id: 1,
     title: "Mon Profil",
-    path: "/profil",
+    path: "/admin/profil",
     cName: "nav-text",
   },
   {
     id: 2,
     title: "Mes Livres",
-    path: "/meslivres",
+    path: "/admin/meslivres",
     cName: "nav-text",
   },
   {
     id: 3,
     title: "Mes actualités",
-    path: "/mesactus",
+    path: "/admin/mesactus",
     cName: "nav-text",
   },
 ];
@@ -31,9 +31,12 @@ function TabMenu() {
           {SideBarData.map((item) => {
             return (
               <li key={item.id} className={item.cName}>
-                <Link to={item.path}>
+                <NavLink
+                  activeStyle={{ background: "white", color: "#01504D" }}
+                  to={item.path}
+                >
                   <span>{item.title}</span>
-                </Link>
+                </NavLink>
               </li>
             );
           })}
