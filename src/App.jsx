@@ -19,7 +19,7 @@ function App() {
         <NavBar />
 
         <Switch>
-          <Route exact path="/" component={Author} />
+          <Route exact path="/auteure" component={Author} />
           <Route exact path="/livres" component={Book} />
           <Route exact path="/partenaires" component={Funding} />
           <Route exact path="/actualites" component={News} />
