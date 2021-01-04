@@ -63,7 +63,7 @@ class SignIn extends React.Component {
               onChange={handleChange}
             />
           </label>
-          <Link to="/profil">
+          <Link to="/admin/profil">
             <button type="submit" value="submit">
               Se connecter
             </button>
