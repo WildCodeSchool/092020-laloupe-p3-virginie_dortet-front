@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    "no-alert": 0,
     "import/prefer-default-export": 0,
     "react/state-in-constructor": 0,
     "react/jsx-one-expression-per-line": 0,
