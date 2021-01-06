@@ -8,14 +8,11 @@ import Funding from "./components/Funding/Funding";
 import News from "./components/News/News";
 import Workshops from "./components/Workshops/Workshops";
 import Preorder from "./components/Preorder/Preorder";
-import ContactForm from "./components/ContactForm/ContactForm";
 import "./App.scss";
-import Author from "./components/Author/Author";
 import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
-    
     <div className="App">
       <Router>
         <Header />
