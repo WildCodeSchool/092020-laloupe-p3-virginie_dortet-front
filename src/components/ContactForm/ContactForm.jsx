@@ -1,4 +1,6 @@
-// import React, { Component } from 'react';
+
+import React from "react";
+import "./ContactForm.scss";
 import React, { useState } from "react";
 import "./ContactForm.scss";
 import Arbuste from "../Arbuste/Arbuste";
@@ -51,6 +53,7 @@ const ContactForm = () => {
     };
   
     return (
+       <div className="page" id="contact">
         <div className="sectionContact">
         <Arbuste />
         <h1 className="titrePage">Restons en Contact</h1>
@@ -90,6 +93,7 @@ const ContactForm = () => {
                 
                 </div>
       </div>
+        </div>
     );
   };
   

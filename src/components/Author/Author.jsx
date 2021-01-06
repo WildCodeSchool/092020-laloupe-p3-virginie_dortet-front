@@ -4,9 +4,9 @@ import Arbuste from "../Arbuste/Arbuste";
 import photoVirginie from "../../../public/picturesAuthor/virginie_dortet.jpg";
 import ptitsinge from "../../../public/picturesAuthor/singeSoloFDtransparent.png";
 
-function Auteur() {
+function Author() {
   return (
-    <div>
+   <div className="page" id="author">
       <div className="sectionAuteur">
         <Arbuste />
         <h1 className="titrePage">L'auteur</h1>
@@ -47,8 +47,10 @@ function Auteur() {
           />
         </div>
       </div>
+
     </div>
   );
 }
 
-export default Auteur;
+
+export default Author;
