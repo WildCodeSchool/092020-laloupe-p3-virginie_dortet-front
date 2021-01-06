@@ -1,77 +1,69 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 import "./SignIn.scss";
 
-class SignIn extends React.Component {
-  state = {
-    email: "",
-    password: "",
-    flash: "",
-  };
+const API_URL = process.env.REACT_APP_API_URL;
 
-  handleChange = (event) => {
-    const nam = event.target.name;
-    const val = event.target.value;
-    this.setState({ [nam]: val });
-  };
+function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useHistory();
 
-  handleSubmit = (event) => {
-    fetch("/admin/signin", {
-      method: "POST",
-      headers: new Headers({
-        "Content-Type": "application/json",
-      }),
-      body: JSON.stringify(this.state),
-    })
-      .then((res) => res.json())
-      .then(
-        (res) => this.setState({ flash: res.flash }),
-        (err) => this.setState({ flash: err.flash })
-      );
-
-    // afficher l'état du composant
-    const myState = JSON.stringify(this.state, 1, 1);
-    console.log(`A form was submitted: ${myState}`);
+  const handleSubmit = (event) => {
     event.preventDefault();
+    if (!email || !password) {
+      alert("Vous devez renseigner un mot de passe et un email");
+    } else {
+      axios
+        .post(`${API_URL}/api/useradmin/login`, {
+          Email: email,
+          Password: password,
+        })
+        .then((res) => res.data)
+        .then((data) => {
+          localStorage.setItem("KALA_TOKEN", data.token);
+          history.push("/admin/profil");
+        })
+        .catch((err) => {
+          console.log();
+          alert(err.response.data.errorMessage);
+        });
+    }
   };
 
-  render() {
-    const { email, password } = this.state;
-    const { handleChange, handleSubmit } = this;
-    return (
-      <div className="center-login">
-        <h1>Administration Virginie Dortet</h1>
-        <form className="login-fields" onSubmit={handleSubmit}>
-          <label htmlFor="email">
-            Adresse email
-            <input
-              label="Adresse email"
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-            />
-          </label>
+  return (
+    <div className="center-login">
+      <h1>Administration Virginie Dortet</h1>
+      <form className="login-fields" onSubmit={handleSubmit}>
+        <label htmlFor="email">
+          Adresse email
+          <input
+            label="email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </label>
 
-          <label htmlFor="password">
-            Mot de passe
-            <input
-              label="password"
-              type="password"
-              name="password"
-              value={password}
-              onChange={handleChange}
-            />
-          </label>
-          <Link to="/admin/profil">
-            <button type="submit" value="submit">
-              Se connecter
-            </button>
-          </Link>
-        </form>
-      </div>
-    );
-  }
+        <label htmlFor="password">
+          Mot de passe
+          <input
+            label="password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </label>
+        <button type="submit" value="submit">
+          Se connecter
+        </button>
+      </form>
+    </div>
+  );
 }
 
 export default SignIn;
