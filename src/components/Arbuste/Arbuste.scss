@@ -1,0 +1,58 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  // .arbusteContainer{
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: center;
+  //   width: 100%; 
+  //   height: auto;   
+  //   margin-bottom: 10px;
+    
+  // }
+  .arbusteContainer{
+    background: url(../../../public/picturesAuthor/arbuste.svg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 680px;
+    width: 100%;
+    margin-top:-40px;
+    padding-top:-40px;
+  }
+
+  // .arbusteAuteur{
+  //   width: 100%;
+  //   height: auto;    
+  //   margin-top: -70px;
+  //   margin-bottom: 0px;    
+  // }
+  
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .arbusteContainer{
+      background: url(../../../public/picturesAuthor/arbuste.svg) center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      margin-top: -10px;
+      margin-bottom: 120px;
+      // padding-top:-40px;
+    }  
+}
+
+@media screen and (max-width: 670px) {
+  .arbusteContainer{
+    background: url(../../../public/picturesAuthor/arbuste.svg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 130px;
+    // padding-top:-40px;
+  }
+  
+}
