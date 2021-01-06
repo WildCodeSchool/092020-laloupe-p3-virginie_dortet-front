@@ -15,14 +15,13 @@
     font-family: "Patrick Hand", cursive;
     color: white;
     font-size: 60px;
-    margin-top: -30px;
+    margin-top: 50px;
     margin-bottom: 60px;
   }
   .flexybox {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
     width: 100%;
     margin-bottom: 180px;
   }
@@ -92,20 +91,12 @@
   }
   
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .arbusteAuteur {
-      size: cover;
-      width: 150%;
-      z-index: 10;
-      margin-top: -100px;
-      margin-bottom: 0px;
-    }
-  
     .titrePage {
       text-align: center;
       font-family: "Patrick Hand", cursive;
       color: white;
       font-size: 50px;
-      margin-top: -110px;
+      margin-top: 50px;
       margin-bottom: 40px;
     }
     .flexybox {
@@ -181,13 +172,7 @@
   }
   
   @media screen and (max-width: 670px) {
-    .arbusteAuteur {
-      size: cover;
-      width: 100%;
-    //   height: 350px;
-      z-index: 10;
-      margin-top: -140px;
-    }
+    
     .video {
       display: none;
     }
