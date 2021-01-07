@@ -1,0 +1,48 @@
+.center-login {
+    width: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 7px;
+    background-color: #01504D;
+
+  }
+
+  .center-login h1 {
+      font-family: "Patrick Hand", cursive;
+      font-size: 2rem;
+      padding: 20px;
+      color: white;
+  }
+
+  .login-fields {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .login-fields input {
+      margin:10px;
+  }
+
+  .login-fields label {
+    font-family: "Patrick Hand", cursive;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .login-fields button {
+      margin:20px;
+      padding: 5px 15px;
+      background-color: white;
+      color: #01504D;
+      border-radius: 7px;
+      font-family: "Patrick Hand", cursive;
+      cursor: pointer;
+      outline: inherit;
+      border: none;
+  }
