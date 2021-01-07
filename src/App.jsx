@@ -8,8 +8,8 @@ import Funding from "./components/Funding/Funding";
 import News from "./components/News/News";
 import Workshops from "./components/Workshops/Workshops";
 import Preorder from "./components/Preorder/Preorder";
-import ContactForm from "./components/ContactForm/ContactForm";
 import "./App.scss";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
