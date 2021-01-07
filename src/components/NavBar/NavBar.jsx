@@ -31,7 +31,7 @@ export default function NavBar() {
         <ul className="liste-nav">
           <li className="items-nav">
             <Link
-              to="/auteure"
+              to="/"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >

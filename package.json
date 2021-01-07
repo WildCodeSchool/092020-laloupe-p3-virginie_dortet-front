@@ -37,11 +37,13 @@
     "sass": "^1.32.0"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "emailjs-com": "^2.6.4",
     "hamburger-react": "^2.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.30.0"
   },
   "husky": {
     "hooks": {
