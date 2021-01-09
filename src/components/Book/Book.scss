@@ -1,0 +1,51 @@
+.bg-books {
+    background-color: #40C2AA;
+}
+.books-content {
+    padding: 40px;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+.bg-books h1 {
+    font-family: "Patrick Hand", cursive;
+    color:#01504D;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.books-content h2 {
+    font-family: "Raleway", sans-serif;
+    color:#01504D;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.books-content p {
+    font-family: "Raleway", sans-serif;
+    color:#01504D;
+    text-align: center;
+}
+.books-content img {
+    width: 100px;
+}
+.price-book {
+    font-weight:bold;
+    font-size: 1.3rem;
+    padding: 30px;
+}
+.books-content button {
+    border-radius: 20px;
+    background-color:#01504D;
+    color: #FFE7CB;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    font-size: 1.5rem;
+    padding: 15px;
+    width: 250px;
+}
+.books-content button:hover {
+  background-color: #da980b;
+  cursor: pointer;
+}
+

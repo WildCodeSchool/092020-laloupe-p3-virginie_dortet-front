@@ -6,9 +6,8 @@ import ptitsinge from "../../../public/picturesAuthor/singeSoloFDtransparent.png
 
 function Author() {
   return (
-    <div className="sectionAuteur" id="author">
+    <div className="sectionAuteur">
       <Arbuste />
-      <h1 className="titrePage">L'auteur</h1>
       <div className="flexybox">
         <div className="PhotoVirginie">
           <img
