@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import TabMenu from "../TabMenu/TabMenu";
 import "./Profile.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -29,14 +28,10 @@ function Profile() {
           alert(err.response.data.errorMessage);
         });
     }
-    return () => {
-      localStorage.removeItem("KALA_TOKEN");
-    };
   }, [history]);
 
   return (
     <div>
-      <TabMenu />
       <div className="common-margin">
         <h1>Mon Profil</h1>
         <ul>
