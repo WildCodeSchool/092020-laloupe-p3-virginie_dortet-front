@@ -40,6 +40,9 @@ function TabMenu() {
               </li>
             );
           })}
+          <li>
+            <button type="submit">Déconnexion</button>
+          </li>
         </ul>
       </nav>
     </>
