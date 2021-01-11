@@ -1,51 +1,39 @@
-import React, { useState, useEffect } from "react";
-import {
-  Switch,
-  Route,
-  useRouteMatch,
-  useHistory,
-  Redirect,
-} from "react-router-dom";
-import axios from "axios";
+import React, { useState } from "react";
+import { Switch, Route, useRouteMatch, Redirect } from "react-router-dom";
 import TabMenu from "./TabMenu/TabMenu";
 import SignIn from "./SignIn/SignIn";
 import Profile from "./Profile/Profile";
 import MyBooks from "./MyBooks/MyBooks";
 import MyNews from "./MyNews/MyNews";
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 function Admin() {
   const { path } = useRouteMatch();
   const [isLogin, setIsLogin] = useState(false);
-  const history = useHistory();
 
-  useEffect(() => {
-    axios
-      .get(`${API_URL}/api/useradmin/login`)
-      .then((res) => res.data)
-      .then((data) => {
-        localStorage.setItem("KALA_TOKEN", data.token);
-        setIsLogin(true);
-      })
-      .catch((err) => {
-        console.log();
-        alert(err.response.data.errorMessage);
-      });
-  }, [history]);
+  // useeffect pour vérifier si le token est valide
+  // route au niveau du back pour vérifier qu'il y a un token et s'il est bon
+  // appel à cette route, isLogin reste à false, si c'est bon passe à false
+  // redirection à /admin/profil
+  // à la destruction du composant, destruction du token localStorage.removeItem
+  // si ya le temps vérification que le token est bon
 
   return (
     <div>
-      <TabMenu />
+      {isLogin && <TabMenu />}
       <Switch>
-        <Route exact path={path} component={SignIn} />
+        <Route exact path={path}>
+          <SignIn setIsLogin={setIsLogin} />
+        </Route>
+
         {isLogin ? (
-          <Route path={`${path}/profil`} component={Profile} />
+          <>
+            <Route path={`${path}/profil`} component={Profile} />
+            <Route path={`${path}/meslivres`} component={MyBooks} />
+            <Route path={`${path}/mesactus`} component={MyNews} />
+          </>
         ) : (
           <Redirect to="/admin" />
         )}
-        <Route path={`${path}/meslivres`} component={MyBooks} />
-        <Route path={`${path}/mesactus`} component={MyNews} />
       </Switch>
     </div>
   );

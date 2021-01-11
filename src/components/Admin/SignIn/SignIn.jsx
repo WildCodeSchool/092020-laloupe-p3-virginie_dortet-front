@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import PropTypes from "prop-types";
 import "./SignIn.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function SignIn() {
+function SignIn({ setIsLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
@@ -23,6 +24,7 @@ function SignIn() {
         .then((res) => res.data)
         .then((data) => {
           localStorage.setItem("KALA_TOKEN", data.token);
+          setIsLogin(true);
           history.push("/admin/profil");
         })
         .catch((err) => {
@@ -64,5 +66,13 @@ function SignIn() {
     </div>
   );
 }
+
+SignIn.propTypes = {
+  setIsLogin: PropTypes.bool,
+};
+
+SignIn.defaultProps = {
+  setIsLogin: false,
+};
 
 export default SignIn;
