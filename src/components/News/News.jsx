@@ -3,6 +3,7 @@ import Arbuste from "../Arbuste/Arbuste";
 import "./News.scss";
 
 function News() {
+
   return (
     <div className="news">
       <Arbuste />
@@ -11,6 +12,7 @@ function News() {
       </div>
     </div>
   );
+
 }
 
 export default News;

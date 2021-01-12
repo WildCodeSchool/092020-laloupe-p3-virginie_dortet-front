@@ -6,9 +6,8 @@ import ptitsinge from "../../../public/picturesAuthor/singeSoloFDtransparent.png
 
 function Author() {
   return (
-    <div className="sectionAuteur" id="author">
+    <div className="sectionAuteur">
       <Arbuste />
-      <h1 className="titrePage">L'auteur</h1>
       <div className="flexybox">
         <div className="PhotoVirginie">
           <img
@@ -21,7 +20,7 @@ function Author() {
           <h1 className="titreAuteur">Virginie Dortet,</h1>
           <h1 className="titreAuteur2">Auteure de livres pour enfants </h1>
           <p className="paragrapheAuteur">
-            Auteur pour enfants je me lance dans l'auto-édition.{" "}
+            Auteure pour enfants je me suis lancée dans l'auto-édition.{" "}
           </p>
           <p className="paragrapheAuteur">
             Passionnée par la littérature, j'ai voulu allier mes engagements
