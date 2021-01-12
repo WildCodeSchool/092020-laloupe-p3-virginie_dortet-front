@@ -9,6 +9,7 @@ import News from "./News/News";
 import Workshops from "./Workshops/Workshops";
 import Preorder from "./Preorder/Preorder";
 import ContactForm from "./ContactForm/ContactForm";
+import Footer from "./Footer/Footer";
 
 function Client() {
   const { path } = useRouteMatch();
@@ -25,7 +26,9 @@ function Client() {
         <Route path={`${path}ateliers`} component={Workshops} />
         <Route path={`${path}precommande`} component={Preorder} />
         <Route path={`${path}contact`} component={ContactForm} />
+        <Route path={`${path}Footer`} component={ContactForm} />
       </Switch>
+      <Footer />
     </div>
   );
 }
