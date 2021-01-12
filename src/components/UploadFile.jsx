@@ -18,7 +18,7 @@ function UploadFile() {
       selectedFile.type !== "image/jpg" &&
       selectedFile.type !== "image/png"
     ) {
-      alert("Seuls les formats .jpg, .png et jpeg sont autorisés.");
+      alert("Seuls les formats .jpg, .png et .jpeg sont autorisés.");
     } else {
       const data = new FormData();
       data.append("file", selectedFile);
