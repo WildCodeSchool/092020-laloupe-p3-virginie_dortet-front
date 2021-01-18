@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function UploadFile() {
+function UploadFileAteliers() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
 
@@ -24,7 +24,7 @@ function UploadFile() {
       data.append("file", selectedFile);
       console.table("form", data.get("file"));
       axios
-        .post(`${API_URL}/api/upload`, data)
+        .post(`${API_URL}/api/upload/ateliers`, data)
         .then((res) => res.data)
         .then((res) => {
           setFileName(res.filename);
@@ -39,19 +39,27 @@ function UploadFile() {
   return (
     <div>
       <form>
-        <input
-          type="file"
-          name="file"
-          accept="image/*"
-          onChange={onChangeHandle}
-        />
-        <button type="button" onClick={onClickHandle}>
-          Upload
-        </button>
-        <img src={`${API_URL}/images/${filename}`} alt="test" />
+        <div className="ateliers-box">
+          <div>
+            <label htmlFor="coloriage">
+              Insérer un coloriage
+              <input
+                type="file"
+                name="file"
+                accept="image/*"
+                onChange={onChangeHandle}
+              />
+            </label>
+            <button type="button" onClick={onClickHandle}>
+              Téléchargez
+            </button>
+          </div>
+        </div>
+
+        <img src={`${API_URL}/public/images/${filename}`} alt="test" />
       </form>
     </div>
   );
 }
 
-export default UploadFile;
+export default UploadFileAteliers;

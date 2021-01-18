@@ -34,10 +34,13 @@ function Profile() {
     <div>
       <div className="common-margin">
         <h1>Mon Profil</h1>
-        <ul>
+        <ul className="list-admin">
           {users.map((user) => (
             <li key={user.id}>
-              {user.Email} - {user.Password}
+              <h2>Mon Email</h2>
+              <p>{user.Email}</p>
+              <h2>Mon mot de passe</h2>
+              <p>{user.Password}</p>
             </li>
           ))}
         </ul>

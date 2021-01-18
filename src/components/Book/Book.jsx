@@ -34,6 +34,9 @@ function Book() {
               Title={book.Title}
               Description={book.Description}
               Price={book.Price}
+              Publication={book.Publication}
+              Link={book.Link}
+              Images={book.Images}
             />
           </div>
         ))}

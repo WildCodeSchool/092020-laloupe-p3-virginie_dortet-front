@@ -5,6 +5,7 @@ import SignIn from "./SignIn/SignIn";
 import Profile from "./Profile/Profile";
 import MyBooks from "./MyBooks/MyBooks";
 import MyNews from "./MyNews/MyNews";
+import MyWorkshops from "./MyWorkshops/MyWorkshops";
 
 function Admin() {
   const { path } = useRouteMatch();
@@ -30,6 +31,7 @@ function Admin() {
             <Route path={`${path}/profil`} component={Profile} />
             <Route path={`${path}/meslivres`} component={MyBooks} />
             <Route path={`${path}/mesactus`} component={MyNews} />
+            <Route path={`${path}/mesateliers`} component={MyWorkshops} />
           </>
         ) : (
           <Redirect to="/admin" />

@@ -1,0 +1,41 @@
+// Font definition 
+$fontStyleh1: "Patrick Hand", cursive;
+$fontStylep: "Raleway", sans-serif;
+
+// Color definition for text
+$textColorBeige: #FFE7CB;
+$textColorGreen: #01504D;
+
+//Color definition for background
+$colorJungleGreen: #01504D;
+$colorLightGreen: #40C2AA;
+$colorSand: #FEB250;
+
+.bg-ateliers {
+    background-color: $colorLightGreen;
+}
+.bg-ateliers h1 {
+    font-family: $fontStyleh1;
+    color: $textColorGreen;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bg-ateliers p {
+    font-family: $fontStylep;
+    color: $textColorGreen;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0;
+}
+.ateliers-images {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 30px;
+}
+.ateliers-images img {
+    width: 400px;
+}
