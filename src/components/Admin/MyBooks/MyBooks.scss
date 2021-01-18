@@ -16,9 +16,34 @@ $colorJungleGreen: #01504D;
 $colorLightGreen: #40C2AA;
 $colorSand: #FEB250;
 
-.books-form h2, .books-form label, .common-margin h1, financement-box label {
+.books-form h2, .books-form label, .common-margin h1, financement-box label, .table-books h2 {
     color: $textColorGreen;
     font-family: $fontStyleh1;
+}
+
+
+//CSS for Table containing all the books 
+
+.table-books table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+    font-family: $fontStyleh1;
+    font-size: 1rem;
+    color: $textColorGreen;
+    margin:20px 0;
+}
+
+.table-books td,
+.table-books th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px 10px;
+}
+
+.table-books td {
+    text-align: center;
 }
 
 //CSS for UploadFile page
@@ -44,10 +69,16 @@ $colorSand: #FEB250;
 }
 .image-box li {
     padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 2fr;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+}
+.image-box label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 .financement-choice {
     display: flex;
@@ -59,7 +90,7 @@ $colorSand: #FEB250;
 .submit-book {
     text-align: center;
 }
-.submit-book button {
+.submit-book button, .addbook-button {
     border-radius: 20px;
     background-color:#01504D;
     color: #FFE7CB;
@@ -70,7 +101,7 @@ $colorSand: #FEB250;
     width: 150px;
 
 }
-.submit-book button:hover {
+.submit-book button:hover, .addbook-button:hover {
     background-color: #da980b;
     cursor: pointer;
   }
