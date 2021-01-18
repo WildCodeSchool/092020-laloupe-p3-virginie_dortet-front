@@ -53,7 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="sectionContact" id="contact">
+    <div className="sectionContact">
       <Arbuste />
       <h1 className="titrePage">Restons en Contact</h1>
       <div className="introContact">

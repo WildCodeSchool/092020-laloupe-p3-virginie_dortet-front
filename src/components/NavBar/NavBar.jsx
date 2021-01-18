@@ -14,7 +14,7 @@ export default function NavBar() {
   useEffect(() => {
     const changeWidth = () => {
       setLargeur(window.innerWidth);
-      if (window.innerWidth > 500) {
+      if (window.innerWidth > 720) {
         setToggleMenu(false);
       }
     };
@@ -27,11 +27,11 @@ export default function NavBar() {
 
   return (
     <nav>
-      {(toggleMenu || largeur > 500) && (
+      {(toggleMenu || largeur > 720) && (
         <ul className="liste-nav">
           <li className="items-nav">
             <Link
-              to="/auteure"
+              to="/"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
             >

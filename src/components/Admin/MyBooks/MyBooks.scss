@@ -1,0 +1,76 @@
+//Do not modify common margin - it allows to fit with the TabMenu on the left of the page
+.common-margin {
+    margin-left: 250px;
+    padding: 0 30px;
+}
+// Font definition 
+$fontStyleh1: "Patrick Hand", cursive;
+$fontStylep: "Raleway", sans-serif;
+
+// Color definition for text
+$textColorBeige: #FFE7CB;
+$textColorGreen: #01504D;
+
+//Color definition for background
+$colorJungleGreen: #01504D;
+$colorLightGreen: #40C2AA;
+$colorSand: #FEB250;
+
+.books-form h2, .books-form label, .common-margin h1, financement-box label {
+    color: $textColorGreen;
+    font-family: $fontStyleh1;
+}
+
+//CSS for UploadFile page
+.form-container {
+    margin: 0 10%;
+}
+.information-box {
+    display: flex;
+    flex-direction: column;
+}
+.information-box textarea {
+    height: 200px;
+    width: 600px;
+}
+.information-box input {
+    width: 400px;
+}
+.information-box label {
+    width: 200px;
+}
+.alt-input {
+    width: 200px;
+}
+.image-box li {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.financement-choice {
+    display: flex;
+}
+.radio-buttom-field {
+    padding: 20px;
+}
+
+.submit-book {
+    text-align: center;
+}
+.submit-book button {
+    border-radius: 20px;
+    background-color:#01504D;
+    color: #FFE7CB;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    padding: 10px;
+    margin: 30px;
+    width: 150px;
+
+}
+.submit-book button:hover {
+    background-color: #da980b;
+    cursor: pointer;
+  }
