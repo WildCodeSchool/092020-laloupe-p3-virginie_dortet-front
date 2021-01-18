@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className="container">
       <div className="mail">
-        <Link activeClassName="active" to="/contact" className="mailcontact">
+        <Link to="/contact" className="mailcontact">
           <p>
             Me contacter par mail:
             <br />

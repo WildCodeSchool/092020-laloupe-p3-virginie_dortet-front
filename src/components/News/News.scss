@@ -1,14 +1,47 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  font-family: "Patrick Hand", cursive;
-  color: #ffe7cb;
-}
 .news {
   background-color: #01504d;
+  font-family: "Patrick Hand", cursive;
+  color: #ffe7cb;
+  font-size: 20px;
 }
-.avenir {
+.news h1 {
   display: flex;
   justify-content: center;
+  margin-bottom: 150px;
+}
+.new {
+  font-size: 18px;
+  padding: 20px;
+}
+.new h2 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.new p {
+  display: flex;
+  justify-content: center;
+}
+.equipe {
+  height: 100px;
+  width: 200px;
+  border-radius: 20px;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.equipe:hover {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.remerciements {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  margin-bottom: -40px;
 }
