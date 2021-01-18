@@ -34,10 +34,10 @@ const ContactForm = () => {
     } else {
       emailjs
         .sendForm(
-          "service_sj798oe",
-          "template_rnp641f",
+          "service_2voxb5n",
+          "template_aj5s5o8",
           e.target,
-          "user_3IV3CFwlcwoGhXLwgO2tv"
+          "user_4q5Gk2uw92taCLpWwiYEr"
         )
         .then(
           (result) => {
