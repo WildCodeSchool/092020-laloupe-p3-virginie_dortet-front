@@ -6,6 +6,7 @@ import "./Funding.scss";
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Funding() {
+
   const [funding, setFunding] = useState([]);
 
   useEffect(() => {

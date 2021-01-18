@@ -32,6 +32,7 @@ function Admin() {
             <Route path={`${path}/meslivres`} component={MyBooks} />
             <Route path={`${path}/mesactus`} component={MyNews} />
             <Route path={`${path}/mesateliers`} component={MyWorkshops} />
+
           </>
         ) : (
           <Redirect to="/admin" />

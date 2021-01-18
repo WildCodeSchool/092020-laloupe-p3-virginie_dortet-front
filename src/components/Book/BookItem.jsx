@@ -8,6 +8,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 function BookItem(props) {
   const [book] = useState(props);
   console.log(book.Images);
+  
   return (
     <div className="bg-books">
       <div className="books-content">

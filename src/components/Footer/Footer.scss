@@ -1,6 +1,6 @@
 .container {
   background-image: url("../../../public/imagefooter.png");
-  height: 200px;
+  height: 100px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,22 +14,28 @@
 .mailcontact {
   font-family: "Patrick Hand", cursive;
   color: #ffe7cb;
-  font-size: 30px;
+  font-size: 23px;
   display: flex;
   align-items: center;
-  margin: 60px;
+  margin: 30px;
   text-decoration: none;
 }
 .facebook {
-  padding: 60px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .facebook:hover {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.5);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  transform: scale(1.4);
 }
 .reseausocial {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
+  margin-top: 15px;
 }
 @media screen and (max-width: 700px) {
   .container {
