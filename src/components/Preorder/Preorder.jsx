@@ -106,7 +106,7 @@ const Preorder = () => {
   };
 
   useEffect(() => {
-    fetch(`${API_URL}/api/fundings`)
+    fetch(`${API_URL}/api/livres`)
       .then((res) => res.json())
       .then((data2) => {
         setLivres(data2);
