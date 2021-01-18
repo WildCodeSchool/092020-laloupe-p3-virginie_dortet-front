@@ -106,7 +106,7 @@ const Preorder = () => {
   };
 
   useEffect(() => {
-    fetch(`${API_URL}/api/fundings`)
+    fetch(`${API_URL}/api/livres`)
       .then((res) => res.json())
       .then((data2) => {
         setLivres(data2);
@@ -241,14 +241,14 @@ const Preorder = () => {
                     <input
                       className="checkbox-round"
                       id={livre.id}
-                      name={livre.Name}
+                      name={livre.Title}
                       type="checkbox"
                       onClick={() => isCheck(id)}
                     />
-                    {livre.Name}
+                    {livre.Title}
                   </div>
                   <div className="div2">
-                    <p className="quantityPreorder" name={livre.Name}>
+                    <p className="quantityPreorder" name={livre.Title}>
                       quantité :
                     </p>
                     <input
