@@ -1,4 +1,4 @@
-//Do not delete common margin - it allows to fit with the TabMenu on the left of the page
+//Do not modify common margin - it allows to fit with the TabMenu on the left of the page
 .common-margin {
     margin-left: 250px;
 }
@@ -16,19 +16,15 @@ $colorJungleGreen: #01504D;
 $colorLightGreen: #40C2AA;
 $colorSand: #FEB250;
 
+// Ateliers images editing CSS
 
-// Profile CSS
-
-.common-margin h1{
-    padding-bottom: 20px;
-}
-
-.list-admin {
-    list-style-type: none;
-
-}
-
-.list-admin h2, .list-admin p {
+.ateliers-edit-box h1, .ateliers-edit-box h2, .ateliers-edit-box label {
     color: $textColorGreen;
     font-family: $fontStyleh1;
+}
+
+.ateliers-box {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
 }

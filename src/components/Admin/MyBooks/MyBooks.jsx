@@ -1,4 +1,5 @@
 import React from "react";
+import UploadFileBooks from "./UploadFileBooks";
 import "./MyBooks.scss";
 
 function MyBooks() {
@@ -6,6 +7,7 @@ function MyBooks() {
     <div>
       <div className="common-margin">
         <h1>Mes Livres</h1>
+        <UploadFileBooks />
       </div>
     </div>
   );
