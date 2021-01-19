@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+import "./MyNews.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function UploadFilesNews() {
+function UploadFilesNews({ setIsOpen }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
   const [title, setTitre] = useState("");
@@ -42,7 +44,7 @@ function UploadFilesNews() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!title || !description || !date || !address) {
+    if (!title || !description || !date || !address || !filename) {
       alert(
         "Vous devez renseigner au minimum un titre, une description, une date et une adresse."
       );
@@ -57,6 +59,9 @@ function UploadFilesNews() {
           Alt: alt,
         })
         .then((res) => res.data)
+        .then(() => {
+          setIsOpen(false);
+        })
         .catch((err) => {
           console.log();
           alert(err.response.data.errorMessage);
@@ -67,10 +72,11 @@ function UploadFilesNews() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="ateliers-box">
+        {/* Informations about the new */}
+        <div>
           <div>
             <label htmlFor="title">
-              Titre de l'actualités
+              Titre de l'actualité
               <input
                 type="text"
                 name="title"
@@ -121,17 +127,30 @@ function UploadFilesNews() {
             <button type="button" onClick={onClickHandle}>
               Téléchargez
             </button>
+            <img
+              className="visualize-img"
+              src={`${API_URL}/public/images/${filename}`}
+              alt=""
+            />
           </div>
         </div>
-        <div className="submit-book">
+        {/* Submit news  */}
+        <div className="submit-new">
           <button type="submit" value="submit">
-            Ajouter une actualité
+            Soumettre
           </button>
         </div>
-        <img src={`${API_URL}/public/images/${filename}`} alt="" />
       </form>
     </div>
   );
 }
+
+UploadFilesNews.propTypes = {
+  setIsOpen: PropTypes.bool,
+};
+
+UploadFilesNews.defaultProps = {
+  setIsOpen: false,
+};
 
 export default UploadFilesNews;
