@@ -30,6 +30,11 @@ function News() {
       <div className="new">
         {news.map((ne) => (
           <div key={ne.id}>
+            {console.log(`${API_URL}/public/images/${ne.Image_Name}`)}
+            <img
+              src={`${API_URL}/public/images/${ne.Image_Name}`}
+              alt={ne.Alt}
+            />
             <h2>{ne.Title}</h2>
             <p>{ne.Description}</p>
             <p>{ne.Date.substring(0, 10)}</p>
