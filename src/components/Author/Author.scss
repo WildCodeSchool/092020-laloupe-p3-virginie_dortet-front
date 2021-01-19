@@ -1,15 +1,15 @@
-// Font definition 
+// Font definition
 $fontStyleh1: "Patrick Hand", cursive;
 $fontStylep: "Raleway", sans-serif;
 
 // Color definition for text
-$textColorBeige: #FFE7CB;
-$textColorGreen: #01504D;
+$textColorBeige: #ffe7cb;
+$textColorGreen: #01504d;
 
 //Color definition for background
-$colorJungleGreen: #01504D;
-$colorLightGreen: #40C2AA;
-$colorSand: #FEB250;
+$colorJungleGreen: #01504d;
+$colorLightGreen: #40c2aa;
+$colorSand: #feb250;
 
 .sectionAuteur {
   background-color: #01504d;
@@ -19,7 +19,7 @@ $colorSand: #FEB250;
 .titrePage {
   text-align: center;
   font-family: "Patrick Hand", cursive;
-  color:#FFE7CB;
+  color: #ffe7cb;
   font-size: 60px;
   margin-top: 50px;
   margin-bottom: 60px;
@@ -57,19 +57,18 @@ $colorSand: #FEB250;
 }
 .titreAuteur {
   font-family: "Patrick Hand", cursive;
-  color:#FFE7CB;
+  color: #ffe7cb;
   font-size: 40px;
-  
 }
 .titreAuteur2 {
   font-size: 40px;
   font-family: "Patrick Hand", cursive;
-  color:#FFE7CB;
+  color: #ffe7cb;
   margin-bottom: 15px;
 }
 .paragrapheAuteur {
   font-family: "Raleway", sans-serif;
-  color:#FFE7CB;
+  color: #ffe7cb;
   font-size: 20px;
   line-height: 25px;
   margin-bottom: 12px;
@@ -80,10 +79,9 @@ $colorSand: #FEB250;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 .ptitsinge {
-  z-index: 1000;
+  z-index: 1;
   margin-left: 750px;
   margin-top: -700px;
   height: 220px;
@@ -104,7 +102,7 @@ $colorSand: #FEB250;
   .titrePage {
     text-align: center;
     font-family: "Patrick Hand", cursive;
-    color:#FFE7CB;
+    color: #ffe7cb;
     font-size: 50px;
     margin-top: 50px;
     margin-bottom: 40px;
@@ -137,22 +135,21 @@ $colorSand: #FEB250;
     align-items: flex-start;
     padding-left: 50px;
     padding-right: 50px;
-    
   }
   .titreAuteur {
     font-family: "Patrick Hand", cursive;
-    color:#FFE7CB;
+    color: #ffe7cb;
     font-size: 30px;
   }
   .titreAuteur2 {
     font-size: 25px;
     font-family: "Patrick Hand", cursive;
-    color:#FFE7CB;
+    color: #ffe7cb;
     margin-bottom: 10px;
   }
   .paragrapheAuteur {
     font-family: "Raleway", sans-serif;
-    color:#FFE7CB;
+    color: #ffe7cb;
     font-size: 20px;
     margin-bottom: 10px;
   }
@@ -162,15 +159,15 @@ $colorSand: #FEB250;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    }
+  }
   .ptitsinge {
-    z-index: 1000;
+    z-index: 1;
     margin-left: 470px;
     margin-top: -640px;
     height: 140px;
     position: absolute;
     -webkit-margin-start: 250px;
-  -webkit-margin-before: -310px;
+    -webkit-margin-before: -310px;
   }
 
   .video {
@@ -180,6 +177,7 @@ $colorSand: #FEB250;
     position: relative;
   }
 }
+
   
   @media screen and (max-width: 670px) {
   .video {
@@ -191,7 +189,7 @@ $colorSand: #FEB250;
   .titrePage {
     text-align: center;
     font-family: "Patrick Hand", cursive;
-    color:#FFE7CB;
+    color: #ffe7cb;
     font-size: 30px;
     margin-top: -130px;
     margin-bottom: 20px;
@@ -221,20 +219,20 @@ $colorSand: #FEB250;
 
   .titreAuteur {
     font-family: "Patrick Hand", cursive;
-    color:#FFE7CB;
+    color: #ffe7cb;
     font-size: 30px;
     text-align: center;
   }
   .titreAuteur2 {
     font-size: 20px;
     font-family: "Patrick Hand", cursive;
-    color:#FFE7CB;
+    color: #ffe7cb;
     margin-bottom: 10px;
     text-align: center;
   }
   .paragrapheAuteur {
     font-family: "Raleway", sans-serif;
-    color:#FFE7CB;
+    color: #ffe7cb;
     font-size: 15px;
     margin-bottom: 8px;
     text-align: center;
