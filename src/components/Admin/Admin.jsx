@@ -13,6 +13,7 @@ import SignIn from "./SignIn/SignIn";
 import Profile from "./Profile/Profile";
 import MyBooks from "./MyBooks/MyBooks";
 import MyNews from "./MyNews/MyNews";
+import MyFundings from "./MyFundings/MyFundings";
 import MyWorkshops from "./MyWorkshops/MyWorkshops";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -65,6 +66,7 @@ function Admin() {
             <Route path={`${path}/profil`} component={Profile} />
             <Route path={`${path}/meslivres`} component={MyBooks} />
             <Route path={`${path}/mesactus`} component={MyNews} />
+            <Route path={`${path}/mespartenaires`} component={MyFundings} />
             <Route path={`${path}/mesateliers`} component={MyWorkshops} />
           </>
         ) : (
