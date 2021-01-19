@@ -128,40 +128,37 @@ const Preorder = () => {
         <p className="paragraphePreorder">
           Je vous donnerai mon adresse pour que vous m'envoyiez votre règlement.
         </p>
-        <p className="paragraphePreorder">
-          Pour le moment, j'accepte et j'encourage le paiement par chèque à
-          envoyer à mon adresse postale.
-        </p>
-        <p className="paragraphePreorder">
-          Pour tout autre moyen de paiement, merci de me le signaler.
-        </p>
+
         <p className="paragraphePreorder">Je vous remercie, à bientôt.</p>
       </div>
       <div className="containerFormPreorder">
         <form className="FormPreorder">
-          <label htmlFor="name">
-            Nom
-            <input
-              className="inputNamePreorder"
-              type="text"
-              name="name"
-              value={name}
-              placeholder="Votre Nom"
-              onChange={handleName}
-            />
-          </label>
-          <label htmlFor="firstname">
-            Prénom
-            <input
-              className="inputFirstNamePreorder"
-              type="text"
-              name="firstname"
-              value={firstname}
-              placeholder="Votre Prénom"
-              onChange={handleFirstName}
-            />
-          </label>
-          <label htmlFor="clientEmail">
+          <div className="namelabel">
+            <label className="name" htmlFor="name">
+              Nom
+              <input
+                className="inputNamePreorder"
+                type="text"
+                name="name"
+                value={name}
+                placeholder="Votre Nom"
+                onChange={handleName}
+              />
+            </label>
+            <label htmlFor="firstname" className="firstname">
+              Prénom
+              <input
+                className="inputFirstNamePreorder"
+                type="text"
+                name="firstname"
+                value={firstname}
+                placeholder="Votre Prénom"
+                onChange={handleFirstName}
+              />
+            </label>
+          </div>
+
+          <label className="clientEmail" htmlFor="clientEmail">
             Email
             <input
               id="clientEmail"
@@ -173,7 +170,7 @@ const Preorder = () => {
               onChange={handleMail}
             />
           </label>
-          <label htmlFor="phone">
+          <label className="phone" htmlFor="phone">
             Téléphone
             <input
               className="inputTelephonePreorder"
@@ -186,7 +183,7 @@ const Preorder = () => {
               onChange={handlePhone}
             />
           </label>
-          <label htmlFor="adresse">
+          <label className="adresse" htmlFor="adresse">
             Adresse
             <input
               className="inputAdressPreorder"
@@ -197,7 +194,7 @@ const Preorder = () => {
               onChange={handleAdress}
             />
           </label>
-          <label htmlFor="codePostal">
+          <label className="codePostal" htmlFor="codePostal">
             Code Postal
             <input
               className="inputCpPreorder"
@@ -208,10 +205,10 @@ const Preorder = () => {
               onChange={handleCp}
             />
           </label>
-          <label htmlFor="ville">
+          <label className="ville" htmlFor="ville">
             Ville
             <input
-              className="inputAdressPreorder"
+              className="inputAdressPreorder2"
               type="text"
               name="ville"
               value={ville}
@@ -219,8 +216,8 @@ const Preorder = () => {
               onChange={handleVille}
             />
           </label>
-          <label htmlFor="message">
-            Message
+          <label className="message" htmlFor="message">
+            Votre Message
             <textarea
               className="inputMessagePreorder"
               type="text"
@@ -266,9 +263,19 @@ const Preorder = () => {
           </div>
           <div className="introPreorder">
             <p className="paragraphePreorder">
+              Pour le moment, j'accepte et j'encourage le paiement par chèque à
+              envoyer à mon adresse postale.
+            </p>
+            <p className="paragraphePreorder">
+              Pour tout autre moyen de paiement, merci de me le signaler.
+            </p>
+            <br />
+            <p className="paragraphePreorder">
               M'indiquer également si vous souhaitez une dédicace et pour quel
               prénom.
             </p>
+
+            <br />
             <br />
             <button
               className="envoyerPreorder"
