@@ -27,6 +27,12 @@ const SideBarData = [
     path: "/admin/mesateliers",
     cName: "nav-text",
   },
+  {
+    id: 5,
+    title: "Mes partenaires",
+    path: "/admin/mespartenaires",
+    cName: "nav-text",
+  },
 ];
 
 function TabMenu() {
