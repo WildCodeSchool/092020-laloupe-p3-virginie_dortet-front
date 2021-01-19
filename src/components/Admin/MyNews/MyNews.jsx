@@ -1,6 +1,6 @@
 import React from "react";
 import UploadFilesNews from "./UploadFilesNews";
-import "./MyNews.scss";
+// import "./MyNews.scss";
 
 function MyNews() {
   return (

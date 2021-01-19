@@ -36,8 +36,6 @@ function SignIn({ setIsLogin }) {
 
   return (
     <div className="center-login">
-      {console.log(`${API_URL}/api/news`)}
-
       <h1>Administration Virginie Dortet</h1>
       <form className="login-fields" onSubmit={handleSubmit}>
         <label htmlFor="email">

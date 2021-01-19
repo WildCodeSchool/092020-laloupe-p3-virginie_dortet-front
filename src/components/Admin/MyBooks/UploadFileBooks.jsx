@@ -1,12 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "./MyBooks.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
 const images = [];
 
-function UploadFileBooks() {
+function UploadFileBooks({ setIsOpen }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
@@ -103,9 +104,9 @@ function UploadFileBooks() {
         .then((res) => res.data)
         .then((data) => {
           upLoadImages(data.BookId);
+          setIsOpen(false);
         })
         .catch((err) => {
-          console.log();
           alert(err.response.data.errorMessage);
         });
     }
@@ -285,5 +286,13 @@ function UploadFileBooks() {
     </div>
   );
 }
+
+UploadFileBooks.propTypes = {
+  setIsOpen: PropTypes.bool,
+};
+
+UploadFileBooks.defaultProps = {
+  setIsOpen: false,
+};
 
 export default UploadFileBooks;

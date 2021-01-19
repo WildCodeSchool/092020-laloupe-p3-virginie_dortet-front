@@ -13,7 +13,7 @@ function MyBooks() {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
+  const displayBook = () => {
     axios
       .get(`${API_URL}/api/livres`)
       .then((res) => res.data)
@@ -24,13 +24,26 @@ function MyBooks() {
       .catch((err) => {
         alert(err.response.data.errorMessage);
       });
-  }, []);
+  };
+
+  useEffect(() => {
+    displayBook();
+  }, [isOpen]);
 
   // Suppress Book
-  // const supBook = () => {
-  //   axios
-  //     .delete(`${API_URL}/api/livres/${BookId}`)
-  // }
+  const deleteBook = (BookId) => {
+    axios
+      .delete(`${API_URL}/api/livres/${BookId}`)
+      .then((res) => res.data)
+      .then((data) => {
+        console.log(data);
+        // appeler la fonction pour màj l'affichage
+        displayBook();
+      })
+      .catch((err) => {
+        alert(err.response.data.errorMessage);
+      });
+  };
 
   return (
     <div>
@@ -56,7 +69,14 @@ function MyBooks() {
                   <td>{book.Link}</td>
                   <td>{book.Price}</td>
                   <td>
-                    <button type="button">Supprimer</button>
+                    <button
+                      onClick={() => {
+                        deleteBook(book.BookId);
+                      }}
+                      type="button"
+                    >
+                      Supprimer
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -67,7 +87,7 @@ function MyBooks() {
         <button type="button" className="addbook-btn" onClick={openBook}>
           Ajouter un livre
         </button>
-        {isOpen && <UploadFileBooks />}
+        {isOpen && <UploadFileBooks setIsOpen={setIsOpen} />}
       </div>
     </div>
   );
