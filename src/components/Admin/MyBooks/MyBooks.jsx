@@ -26,6 +26,12 @@ function MyBooks() {
       });
   }, []);
 
+  // Suppress Book
+  // const supBook = () => {
+  //   axios
+  //     .delete(`${API_URL}/api/livres/${BookId}`)
+  // }
+
   return (
     <div>
       <div className="common-margin">
@@ -39,6 +45,7 @@ function MyBooks() {
                 <th>Date de publication</th>
                 <th>Lien financement</th>
                 <th>Prix (en euros)</th>
+                <th>Supprimer</th>
               </tr>
             </thead>
             <tbody>
@@ -48,6 +55,9 @@ function MyBooks() {
                   <td>{book.Publication}</td>
                   <td>{book.Link}</td>
                   <td>{book.Price}</td>
+                  <td>
+                    <button type="button">Supprimer</button>
+                  </td>
                 </tr>
               ))}
             </tbody>
