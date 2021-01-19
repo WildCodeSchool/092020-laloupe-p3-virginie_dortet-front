@@ -1,5 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
+
 import "./TabMenu.scss";
 
 const SideBarData = [
@@ -29,7 +31,15 @@ const SideBarData = [
   },
 ];
 
-function TabMenu() {
+function TabMenu({ setIsLogin }) {
+  const history = useHistory();
+
+  const handleClick = () => {
+    localStorage.removeItem("KALA_TOKEN");
+    history.push("/admin/profil");
+    setIsLogin(false);
+  };
+
   return (
     <>
       <nav className="nav-menu">
@@ -47,12 +57,22 @@ function TabMenu() {
             );
           })}
           <li>
-            <button type="submit">Déconnexion</button>
+            <button type="submit" onClick={handleClick}>
+              Déconnexion
+            </button>
           </li>
         </ul>
       </nav>
     </>
   );
 }
+
+TabMenu.propTypes = {
+  setIsLogin: PropTypes.bool,
+};
+
+TabMenu.defaultProps = {
+  setIsLogin: false,
+};
 
 export default TabMenu;

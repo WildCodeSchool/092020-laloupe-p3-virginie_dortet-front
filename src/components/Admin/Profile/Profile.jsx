@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./Profile.scss";
 
@@ -7,28 +6,25 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 function Profile() {
   const [users, setUsers] = useState([]);
-  const history = useHistory();
+
+  const token = localStorage.getItem("KALA_TOKEN");
 
   useEffect(() => {
-    const token = localStorage.getItem("KALA_TOKEN");
-    if (!token) {
-      history.push("/admin");
-    } else {
-      axios
-        .get(`${API_URL}/api/useradmin`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        .then((res) => res.data)
-        .then((data) => {
-          setUsers(data);
-        })
-        .catch((err) => {
-          alert(err.response.data.errorMessage);
-        });
-    }
-  }, [history]);
+    axios
+      .get(`${API_URL}/api/useradmin`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => res.data)
+      .then((data) => {
+        console.log(data);
+        setUsers(data);
+      })
+      .catch((err) => {
+        alert(err.response.data.errorMessage);
+      });
+  }, []);
 
   return (
     <div>
