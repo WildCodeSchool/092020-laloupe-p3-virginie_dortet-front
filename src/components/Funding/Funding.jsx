@@ -33,7 +33,7 @@ function Funding() {
             <a href={partner.Link}>
               <img
                 src={`${API_URL}/public/images/${partner.Image_Name}`}
-                alt="test"
+                alt={partner.Alt}
               />
             </a>
           </div>
