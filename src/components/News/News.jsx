@@ -35,7 +35,7 @@ function News() {
               alt={ne.Alt}
             />
             <div className="paragraphe">
-              <h2>{ne.Title}</h2>
+              <h2 className="police">{ne.Title}</h2>
               <p>
                 {ne.Date.substring(0, 10)},{ne.Address}
               </p>
