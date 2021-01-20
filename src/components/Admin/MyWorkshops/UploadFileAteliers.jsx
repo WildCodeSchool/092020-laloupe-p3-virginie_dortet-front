@@ -56,7 +56,7 @@ function UploadFileAteliers() {
           </div>
         </div>
 
-        <img src={`${API_URL}/public/images/${filename}`} alt="test" />
+        <img src={`${API_URL}/public/images/${filename}`} alt="" />
       </form>
     </div>
   );

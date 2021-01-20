@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import "./MyNews.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -65,10 +66,10 @@ function UploadFilesNews() {
   };
 
   return (
-    <div>
+    <div className="actualites">
       <form onSubmit={handleSubmit}>
-        <div className="ateliers-box">
-          <div>
+        <div className="ateliers">
+          <div className="actus">
             <label htmlFor="title">
               Titre de l'actualités
               <input
@@ -93,12 +94,13 @@ function UploadFilesNews() {
                 onChange={(e) => setAddress(e.target.value)}
               />
             </label>
-            <label htmlFor="description">
+            <label className="desc" htmlFor="description">
               Description de l'actualité
-              <input
+              <textarea
                 type="text"
                 name="description"
                 onChange={(e) => setDescription(e.target.value)}
+                maxLength="800"
               />
             </label>
             <label htmlFor="titre">
@@ -118,12 +120,12 @@ function UploadFilesNews() {
                 onChange={onChangeHandle}
               />
             </label>
-            <button type="button" onClick={onClickHandle}>
+            <button className="btn" type="button" onClick={onClickHandle}>
               Téléchargez
             </button>
           </div>
         </div>
-        <div className="submit-book">
+        <div className="submit-news">
           <button type="submit" value="submit">
             Ajouter une actualité
           </button>

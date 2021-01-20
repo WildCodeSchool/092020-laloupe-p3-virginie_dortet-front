@@ -3,35 +3,32 @@
   font-family: "Patrick Hand", cursive;
   color: #ffe7cb;
   font-size: 20px;
+  width: 100%;
+  height: 100%;
 }
 .news h1 {
   display: flex;
   justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 .new {
   font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+  align-items: center;
   padding: 20px;
+  padding-left: 100px;
+}
 
-}
-.new h2 {
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-.new p {
-  display: flex;
-  justify-content: center;
-}
 .equipe {
   height: 100px;
   width: 200px;
-  border-radius: 20px;
   -webkit-filter: grayscale(0) blur(0px);
   filter: grayscale(0) blur(0px);
   -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 .equipe:hover {
   width: 200px;
@@ -42,7 +39,24 @@
 }
 .remerciements {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  padding: 50px;
-  margin-bottom: -40px;
+  padding: 20px;
+}
+.img {
+  height: 250px;
+  width: 320px;
+  padding: 15px;
+  border-radius: 30px;
+}
+.paragraphe {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-left: 20px;
+}
+.css {
+  display: flex;
 }
