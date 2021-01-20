@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+import "./MyFundings.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function UploadFilesFundings() {
+function UploadFilesFundings({ setIsOpen }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
   const [name, setTitre] = useState("");
@@ -55,6 +57,9 @@ function UploadFilesFundings() {
           Link,
         })
         .then((res) => res.data)
+        .then(() => {
+          setIsOpen(false);
+        })
         .catch((err) => {
           console.log();
           alert(err.response.data.errorMessage);
@@ -94,14 +99,6 @@ function UploadFilesFundings() {
                 onChange={(e) => setLink(e.target.value)}
               />
             </label>
-            <label className="AltPart" htmlFor="Alt">
-              Alt du logo
-              <input
-                type="text"
-                name="alt"
-                onChange={(e) => setAlt(e.target.value)}
-              />
-            </label>
             <label className="PictPart" htmlFor="image">
               Insérer une image
               <input
@@ -111,9 +108,18 @@ function UploadFilesFundings() {
                 onChange={onChangeHandle}
               />
             </label>
-            <button type="button" onClick={onClickHandle}>
-              Téléchargez le logo
+            <label className="AltPart" htmlFor="Alt">
+              Description de l'image
+              <input
+                type="text"
+                name="alt"
+                onChange={(e) => setAlt(e.target.value)}
+              />
+            </label>
+            <button className="dl-btn" type="button" onClick={onClickHandle}>
+              Téléchargez l'image
             </button>
+            <img src={`${API_URL}/public/images/${filename}`} alt="" />
           </div>
         </div>
         <div className="submit-Partner">
@@ -121,13 +127,17 @@ function UploadFilesFundings() {
             Ajouter le Partenaire
           </button>
         </div>
-        <a href={Link} target=" blank ">
-          <img src={`${API_URL}/public/images/${filename}`} alt="" />
-        </a>
-        {console.log(`${API_URL}/public/images/${filename}`)}
       </form>
     </div>
   );
 }
+
+UploadFilesFundings.propTypes = {
+  setIsOpen: PropTypes.bool,
+};
+
+UploadFilesFundings.defaultProps = {
+  setIsOpen: false,
+};
 
 export default UploadFilesFundings;

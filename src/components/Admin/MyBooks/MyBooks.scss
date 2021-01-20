@@ -102,3 +102,28 @@ $colorSand: #FEB250;
     background-color: #da980b;
     cursor: pointer;
   }
+
+  //CSS for button to add a book
+.addbook-btn {
+    border-radius: 5px;
+    background-color:#01504D;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    padding: 10px;
+    width: 150px;
+
+}
+.addbook-btn:hover {
+    background-color: #da980b;
+    cursor: pointer;
+  }
+//CSS for supress button
+.suppressbook-btn {
+    border-radius: 5px;
+    background-color:#01504D;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    padding: 5px;
+}

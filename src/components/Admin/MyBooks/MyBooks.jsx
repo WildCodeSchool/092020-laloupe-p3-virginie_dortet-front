@@ -70,6 +70,7 @@ function MyBooks() {
                   <td>{book.Price}</td>
                   <td>
                     <button
+                      className="suppressbook-btn"
                       onClick={() => {
                         deleteBook(book.BookId);
                       }}

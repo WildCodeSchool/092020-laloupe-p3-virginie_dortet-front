@@ -1,7 +1,9 @@
-common-margin {
+//Do not modify common margin - it allows to fit with the TabMenu on the left of the page
+.common-margin {
     margin-left: 250px;
     padding: 0 30px;
 }
+// Font definition 
 $fontStyleh1: "Patrick Hand", cursive;
 $fontStylep: "Raleway", sans-serif;
 
@@ -9,14 +11,20 @@ $fontStylep: "Raleway", sans-serif;
 $textColorBeige: #FFE7CB;
 $textColorGreen: #01504D;
 
+//Color definition for background
+$colorJungleGreen: #01504D;
+$colorLightGreen: #40C2AA;
+$colorSand: #FEB250;
+
 //CSS for Title of the page
-.table-funding h2 {
+.table-news h2 {
     color: #01504D;
     font-family: "Patrick Hand", cursive;
 }
 
-//CSS for Table containing all the fundings
-.table-funding table {
+
+//CSS for Table containing all the books 
+.table-news table {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
     letter-spacing: 1px;
@@ -28,59 +36,21 @@ $textColorGreen: #01504D;
     margin:20px 0;
 }
 
-.table-funding td,
-.table-funding th {
+.table-news td,
+.table-news th {
     border: 1px solid rgb(190, 190, 190);
     padding: 5px 10px;
 }
 
-.table-funding td {
+.table-news td {
     text-align: center;
 }
 
-//CSS for button to add a funding
-.add-funding {
-    border-radius: 5px;
-    background-color:#01504D;
-    color: white;
-    font-family: "Raleway", sans-serif;
-    border: none;
-    padding: 10px;
-    width: 150px;
-
+//CSS for submit button 
+.submit-new {
+    text-align: center;
 }
-.add-funding:hover {
-    background-color: #da980b;
-    cursor: pointer;
-  }
-//CSS for supress button
-.supressfunding-btn, .dl-btn {
-    border-radius: 5px;
-    background-color:#01504D;
-    color: white;
-    font-family: "Raleway", sans-serif;
-    border: none;
-    padding: 5px;
-}
-
-
-//CSS for the form to submit a new funding
-.container_partenaires{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.leslabels label{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    color: $textColorGreen;
-    font-family: $fontStyleh1;
-}
-
-.EnvoyerPartner{
+.submit-new button {
     border-radius: 20px;
     background-color:#01504D;
     color: #FFE7CB;
@@ -89,18 +59,39 @@ $textColorGreen: #01504D;
     padding: 10px;
     margin: 30px;
     width: 150px;
-   
-}
-.inputPart{
-    width: 500px;
-    height: 50px;
 
 }
+.submit-new button:hover {
+    background-color: #da980b;
+    cursor: pointer;
+  }
 
-.submit-Partner{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: center;
-    margin-bottom: 20px;
+//CSS for button to add a news
+.add-new {
+    border-radius: 5px;
+    background-color:#01504D;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    padding: 10px;
+    width: 150px;
+
+}
+.add-new:hover {
+    background-color: #da980b;
+    cursor: pointer;
+  }
+//CSS for supress button
+.supressnew-btn {
+    border-radius: 5px;
+    background-color:#01504D;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    padding: 5px;
+}
+
+//Visualization of the image resizing
+.visualize-img {
+    width:200px;
 }
