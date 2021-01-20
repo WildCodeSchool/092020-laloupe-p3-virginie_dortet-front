@@ -23,31 +23,33 @@ function News() {
 
   return (
     <div className="news">
-      {console.log(`${API_URL}/api/news`)}
       <Arbuste />
       <h1>Actualités</h1>
 
       <div className="new">
         {news.map((ne) => (
-          <div key={ne.id}>
-            {console.log(`${API_URL}/public/images/${ne.Image_Name}`)}
+          <div key={ne.id} className="css">
             <img
+              className="img"
               src={`${API_URL}/public/images/${ne.Image_Name}`}
               alt={ne.Alt}
             />
-            <h2>{ne.Title}</h2>
-            <p>{ne.Description}</p>
-            <p>{ne.Date.substring(0, 10)}</p>
-            <p>{ne.Address}</p>
+            <div className="paragraphe">
+              <h2>{ne.Title}</h2>
+              <p>
+                {ne.Date.substring(0, 10)},{ne.Address}
+              </p>
+              <p>{ne.Description}</p>
+            </div>
           </div>
         ))}
       </div>
       <div className="remerciements">
-        <img className="equipe" src={Equipe} alt="equipe" />
         <p>
           Remerciements à toute l'équipe de la Wild Code School, Topal Mustafa,
           Quero Sarah, Torres Philippe et Gouguet Maud.
         </p>
+        <img className="equipe" src={Equipe} alt="equipe" />
       </div>
     </div>
   );

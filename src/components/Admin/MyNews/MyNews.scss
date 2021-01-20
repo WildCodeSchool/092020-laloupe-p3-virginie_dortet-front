@@ -1,97 +1,146 @@
+$fontStyleh1: "Patrick Hand", cursive;
+$fontStylep: "Raleway", sans-serif;
+
+$textColorBeige: #ffe7cb;
+$textColorGreen: #01504d;
+.common-margin h1 {
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+.actus {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-news button {
+  border-radius: 20px;
+  background-color: #01504d;
+  color: #ffe7cb;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  padding: 10px;
+  margin: 30px;
+  width: 150px;
+}
+.submit-news button:hover {
+  background-color: #da980b;
+  cursor: pointer;
+}
+.submit-news {
+  text-align: center;
+}
+.btn {
+  height: 20px;
+  width: 100px;
+}
+.actus label {
+  color: $textColorGreen;
+  font-family: $fontStyleh1;
+}
+.actus input {
+  width: 300px;
+  margin: 10px;
+}
+.actus textarea {
+  height: 70px;
+  width: 400px;
+  margin: 10px;
+}
+.desc {
+  display: flex;
+  align-items: center;
+}
 //Do not modify common margin - it allows to fit with the TabMenu on the left of the page
 .common-margin {
-    margin-left: 250px;
-    padding: 0 30px;
+  margin-left: 250px;
+  padding: 0 30px;
 }
-// Font definition 
+// Font definition
 $fontStyleh1: "Patrick Hand", cursive;
 $fontStylep: "Raleway", sans-serif;
 
 // Color definition for text
-$textColorBeige: #FFE7CB;
-$textColorGreen: #01504D;
+$textColorBeige: #ffe7cb;
+$textColorGreen: #01504d;
 
 //Color definition for background
-$colorJungleGreen: #01504D;
-$colorLightGreen: #40C2AA;
-$colorSand: #FEB250;
+$colorJungleGreen: #01504d;
+$colorLightGreen: #40c2aa;
+$colorSand: #feb250;
 
 //CSS for Title of the page
 .table-news h2 {
-    color: #01504D;
-    font-family: "Patrick Hand", cursive;
+  color: #01504d;
+  font-family: "Patrick Hand", cursive;
 }
 
-
-//CSS for Table containing all the books 
+//CSS for Table containing all the books
 .table-news table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    font-size: .8rem;
-    font-family: $fontStyleh1;
-    font-size: 1rem;
-    color: $textColorGreen;
-    margin:20px 0;
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  font-family: $fontStyleh1;
+  font-size: 1rem;
+  color: $textColorGreen;
+  margin: 20px 0;
 }
 
 .table-news td,
 .table-news th {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 5px 10px;
+  border: 1px solid rgb(190, 190, 190);
+  padding: 5px 10px;
 }
 
 .table-news td {
-    text-align: center;
+  text-align: center;
 }
 
-//CSS for submit button 
+//CSS for submit button
 .submit-new {
-    text-align: center;
+  text-align: center;
 }
 .submit-new button {
-    border-radius: 20px;
-    background-color:#01504D;
-    color: #FFE7CB;
-    font-family: "Raleway", sans-serif;
-    border: none;
-    padding: 10px;
-    margin: 30px;
-    width: 150px;
-
+  border-radius: 20px;
+  background-color: #01504d;
+  color: #ffe7cb;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  padding: 10px;
+  margin: 30px;
+  width: 150px;
 }
 .submit-new button:hover {
-    background-color: #da980b;
-    cursor: pointer;
-  }
+  background-color: #da980b;
+  cursor: pointer;
+}
 
 //CSS for button to add a news
 .add-new {
-    border-radius: 5px;
-    background-color:#01504D;
-    color: white;
-    font-family: "Raleway", sans-serif;
-    border: none;
-    padding: 10px;
-    width: 150px;
-
+  border-radius: 5px;
+  background-color: #01504d;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  padding: 10px;
+  width: 150px;
 }
 .add-new:hover {
-    background-color: #da980b;
-    cursor: pointer;
-  }
+  background-color: #da980b;
+  cursor: pointer;
+}
 //CSS for supress button
 .supressnew-btn {
-    border-radius: 5px;
-    background-color:#01504D;
-    color: white;
-    font-family: "Raleway", sans-serif;
-    border: none;
-    padding: 5px;
+  border-radius: 5px;
+  background-color: #01504d;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  padding: 5px;
 }
 
 //Visualization of the image resizing
 .visualize-img {
-    width:200px;
+  width: 200px;
 }
