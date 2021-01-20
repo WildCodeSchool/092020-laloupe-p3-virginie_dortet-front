@@ -1,52 +1,50 @@
 common-margin {
-    margin-left: 250px;
-    padding: 0 30px;
+  margin-left: 250px;
+  padding: 0 30px;
 }
 $fontStyleh1: "Patrick Hand", cursive;
 $fontStylep: "Raleway", sans-serif;
 
 // Color definition for text
-$textColorBeige: #FFE7CB;
-$textColorGreen: #01504D;
+$textColorBeige: #ffe7cb;
+$textColorGreen: #01504d;
 
-.container_partenaires{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.container_partenaires {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.leslabels label{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    color: $textColorGreen;
-    font-family: $fontStyleh1;
+.leslabels label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  color: $textColorGreen;
+  font-family: $fontStyleh1;
 }
 
-.EnvoyerPartner{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width : 200px;
-    height: 40px;
-    padding: 10px auto;
-    border-radius: 10px;
-    text-align: center;
-   
+.EnvoyerPartner {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 200px;
+  height: 40px;
+  padding: 10px auto;
+  border-radius: 10px;
+  text-align: center;
 }
-.inputPart{
-    width: 500px;
-    height: 50px;
-
+.inputPart {
+  width: 500px;
+  height: 50px;
 }
 
-.submit-Partner{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    
-    margin-bottom: 20px;
+.submit-Partner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin-bottom: 20px;
 }
