@@ -9,7 +9,7 @@
 .news h1 {
   display: flex;
   justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   font-size: 3.5rem;
 }
 .new {
@@ -65,15 +65,17 @@
 }
 .css {
   display: flex;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .news h1 {
     margin-bottom: 60px;
     margin-top: -50px;
-    font-size: 30px;
+    font-size: 3.5rem;
   }
   .paragraphe {
     font-size: 15px;
+    padding-top: 15px;
   }
   .remerciements p {
     font-size: 12px;
@@ -103,6 +105,9 @@
   .remerciements p {
     font-size: 10px;
     margin-bottom: -30px;
+  }
+  .remerciements {
+    padding: 30px 40px;
   }
   .equipe {
     height: 50px;

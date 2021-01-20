@@ -30,7 +30,7 @@ function BookItem(props) {
 
         <p>{book.Description}</p>
         <a href={book.Link} target="_blank" rel="noreferrer">
-          <img src={logoulule} alt="logo ulule" />
+          <img className="logo-ulule" src={logoulule} alt="logo ulule" />
         </a>
         <p className="price-book"> Prix: {book.Price} euros</p>
         <Link to="/precommande">
