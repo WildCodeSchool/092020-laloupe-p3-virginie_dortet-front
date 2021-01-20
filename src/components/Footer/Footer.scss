@@ -1,0 +1,45 @@
+.container {
+  background-image: url("../../../public/nouvwelcome.jpg");
+  height: 100px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Patrick Hand", cursive;
+  color: #ffe7cb;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mailcontact {
+  font-family: "Patrick Hand", cursive;
+  color: #ffe7cb;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  margin: 17px;
+  text-decoration: none;
+}
+.facebook {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.facebook:hover {
+  -webkit-transform: scale(1.5);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  transform: scale(1.4);
+}
+.reseausocial {
+  height: 70px;
+  width: 70px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 70%;
+    font-size: 20px;
+  }
+}

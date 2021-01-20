@@ -1,0 +1,54 @@
+nav {
+    position: sticky;
+    z-index: 1000;
+    width:100%;
+    top: 0;
+    height: 60px;
+    background:#01504D;
+}
+.liste-nav {
+    list-style-type: none;
+    background:#01504D;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.items-nav {
+    margin-right: 10px;
+    font-family: "Patrick Hand", cursive;
+    font-size: 24px;
+    cursor: pointer;
+}
+.btn-nav {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .liste-nav {
+        flex-direction: column;
+        height: 400px;
+    }
+    .items-nav:nth-child(1){
+        margin-top: 50px;
+    }
+    .items-nav {
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+    }
+    .btn-nav {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+        background: none;
+        color:#FFE7CB;
+        border: none;
+    }
+}

@@ -1,0 +1,253 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  .sectionContact{
+    background-color: #01504d;
+    height: 100%;
+    width: 100%;
+  }  
+  
+  .titrePage {
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    color: white;
+    font-size: 60px;
+    margin-top: -30px;
+    margin-bottom: 100px;
+  }
+
+  .introContact{
+    width: 100%;
+    text-align: left;
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+
+  .paragrapheContact {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    padding: 2px 50px;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+.containerForm { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+}
+.containerNames{
+    display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 67%;
+}
+
+  .Form {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 100px;
+      width: 100%;
+  }
+
+  .paraphForm {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;  
+  }
+  
+  .inputName {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    width:60%;
+    height:50px;
+    padding-left:15px;
+    font-size:20px;
+    margin:20px auto; 
+}
+
+.inputFirstName{
+  width:60%;
+  height:50px;
+  padding-left:15px;
+  font-size:20px;
+  margin:20px auto;
+}
+.inputEmail{
+  width:60%;
+  height:50px;
+  padding-left:15px;
+  font-size:20px;
+  margin:20px auto;
+}
+.inputMessage{
+  width:60%;
+  height:400px;
+  padding-left:15px;
+  font-size:20px;
+  padding-top:15px;
+  margin: 20px auto;
+
+}
+
+
+
+  .envoyer{
+      border-radius: 30px;
+      background-color: #30908A;
+      border: none;
+      font-size: 25px;
+      padding: 15px;
+      color: white;
+      width: 250px;
+  }
+  .envoyer:hover {
+    background-color: #da980b;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .titrePage {
+      text-align: center;
+      font-family: "Patrick Hand", cursive;
+      color: white;
+      font-size: 50px;
+      margin-top: -120px;
+      margin-bottom: 40px;
+    }
+    .introContact{
+      width: 100%;
+      text-align: left;
+      padding-left: 5%;
+      padding-right: 5%;        
+    }
+    .paragrapheContact {
+      font-family: "Raleway", sans-serif;
+      color: white;
+      padding: 2px 50px;
+      font-size: 20px;
+      margin-bottom: 0px;
+    }
+    .inputName {
+    margin-top: 0px;      
+    padding-left: 15px;
+    width:80%;
+    height:50px;
+    padding-left:15px;
+    font-size:20px;
+    margin-bottom:10px; 
+  }
+  .inputFirstName{
+    width:80%;
+    height:50px;
+    padding-left:15px;
+    font-size:20px;
+    margin:10px auto;
+  }
+  .inputEmail{
+    width:80%;
+    height:50px;
+    padding-left:15px;
+    font-size:20px;
+    margin:10px auto;
+  }
+  .inputMessage{
+    width:80%;
+    height:300px;
+    padding-left:15px;
+    font-size:20px;
+    padding-top:15px;
+    margin: 10px auto;
+  
+  }
+    .envoyer{
+      border-radius: 30px;
+      background-color: #30908A;
+      margin-top: 20px;
+      border: none;
+      font-size: 25px;
+      padding: 15px;
+      color: white;
+      width: 350px;
+  }
+  .envoyer:hover {
+    background-color: #da980b;
+    cursor: pointer;
+  }
+    }
+  @media screen and (max-width: 670px) {
+      .titrePage {
+      text-align: center;
+      font-family: "Patrick Hand", cursive;
+      color: white;
+      font-size: 30px;
+      margin-top: -130px;
+      margin-bottom: 20px;
+    }
+    .introContact{
+      width: 100%;
+      text-align: left;
+      padding-left: 3%;
+      padding-right: 3%;        
+    }
+    .paragrapheContact {
+      font-family: "Raleway", sans-serif;
+      color: white;
+      padding: 2px 50px;
+      font-size: 15px;
+      margin-bottom: 0px;
+    }
+    .inputName {
+    margin-top: 0px;      
+    padding-left: 15px;
+    width:80%;
+    height:50px;
+    padding-left:15px;
+    font-size:15px;
+    margin-bottom:10px; 
+  }
+  .inputFirstName{
+    width:80%;
+    height:50px;
+    padding-left:15px;
+    font-size:15px;
+    margin:10px auto;
+  }
+  .inputEmail{
+    width:80%;
+    height:50px;
+    padding-left:15px;
+    font-size:15px;
+    margin:10px auto;
+  }
+  .inputMessage{
+    width:80%;
+    height:300px;
+    padding-left:15px;
+    font-size:15px;
+    padding-top:15px;
+    margin: 10px auto;
+  
+  }
+    .envoyer{
+      border-radius: 30px;
+      background-color: #30908A;
+      border: none;
+      font-size: 20px;
+      padding: 10px;
+      color: white;
+      width: 200px;
+  }
+  .envoyer:hover {
+    background-color: #da980b;
+    cursor: pointer;
+  }
+  }

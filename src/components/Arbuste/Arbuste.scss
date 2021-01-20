@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  .arbusteContainer{
+    background-image: url(../../../public/picturesAuthor/feuillage.png);
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+  }
+
+
+@media screen and (max-width: 670px) {
+  .arbusteContainer {
+    margin-bottom: -150px;
+  }
+}
+  

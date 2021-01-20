@@ -1,0 +1,34 @@
+//Do not delete common margin - it allows to fit with the TabMenu on the left of the page
+.common-margin {
+    margin-left: 250px;
+}
+
+// Font definition 
+$fontStyleh1: "Patrick Hand", cursive;
+$fontStylep: "Raleway", sans-serif;
+
+// Color definition for text
+$textColorBeige: #FFE7CB;
+$textColorGreen: #01504D;
+
+//Color definition for background
+$colorJungleGreen: #01504D;
+$colorLightGreen: #40C2AA;
+$colorSand: #FEB250;
+
+
+// Profile CSS
+
+.common-margin h1{
+    padding-bottom: 20px;
+}
+
+.list-admin {
+    list-style-type: none;
+
+}
+
+.list-admin h2, .list-admin p {
+    color: $textColorGreen;
+    font-family: $fontStyleh1;
+}
