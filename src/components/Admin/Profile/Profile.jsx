@@ -36,7 +36,7 @@ function Profile() {
               <h2>Mon Email</h2>
               <p>{user.Email}</p>
               <h2>Mon mot de passe</h2>
-              <p>{user.Password}</p>
+              <p>●●●●●</p>
             </li>
           ))}
         </ul>
