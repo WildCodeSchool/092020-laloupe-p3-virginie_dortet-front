@@ -133,7 +133,7 @@ function UploadFilesFundings({ setIsOpen }) {
 }
 
 UploadFilesFundings.propTypes = {
-  setIsOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
 };
 
 UploadFilesFundings.defaultProps = {

@@ -287,7 +287,7 @@ function UploadFileBooks({ setIsOpen }) {
 }
 
 UploadFileBooks.propTypes = {
-  setIsOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
 };
 
 UploadFileBooks.defaultProps = {

@@ -74,6 +74,7 @@ $colorSand: #feb250;
 }
 .presentationVirginie p {
   font-family: $fontStylep;
+  line-height: 40px;
 }
 .titreAuteur {
   font-family: "Patrick Hand", cursive;
@@ -157,6 +158,12 @@ $colorSand: #feb250;
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .presentationVirginie p {
+    line-height: 25px;
+  }
+
+
   .titreAuteur {
     font-family: "Patrick Hand", cursive;
     color: #ffe7cb;
@@ -256,6 +263,10 @@ $colorSand: #feb250;
     align-items: center;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .presentationVirginie p {
+    line-height: 25px;
   }
 
   .titreAuteur {

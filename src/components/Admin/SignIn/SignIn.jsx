@@ -68,11 +68,7 @@ function SignIn({ setIsLogin }) {
 }
 
 SignIn.propTypes = {
-  setIsLogin: PropTypes.bool,
-};
-
-SignIn.defaultProps = {
-  setIsLogin: false,
+  setIsLogin: PropTypes.func.isRequired,
 };
 
 export default SignIn;

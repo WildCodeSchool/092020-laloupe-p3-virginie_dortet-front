@@ -102,7 +102,7 @@ function UploadFileAteliers({ setIsOpen }) {
 }
 
 UploadFileAteliers.propTypes = {
-  setIsOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
 };
 
 UploadFileAteliers.defaultProps = {
