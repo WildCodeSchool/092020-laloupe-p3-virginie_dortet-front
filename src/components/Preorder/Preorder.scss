@@ -235,7 +235,7 @@
     font-size:20px;
     color: #01504D;
     margin-bottom: 40px;
-    margin-left: 320px;
+    margin-left: 420px;
   }
 
   .listeLivre {
@@ -243,8 +243,8 @@
     flex-direction: column;
     align-items:center;
     list-style-type: none;
-    width: 90%;
-    padding-left: 40px;
+    width: 80%;
+    padding-left: 60px;
     margin-bottom: 10px;
   }
 
@@ -272,8 +272,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    
-    width: 50%;    
+    width: 100%;    
     margin-bottom: 10px;
     font-family: "Patrick Hand", cursive;
     color: #01504D;
@@ -370,7 +369,7 @@
                 margin-bottom: 10px;  
               }
               
-              label {
+              .namelabel label {
                 font-family: "Raleway", sans-serif;
                 color:  #01504D;
                 font-size: 20px;
@@ -577,11 +576,11 @@
                 flex-direction: row;
                 flex-wrap: nowrap;
                 justify-content: space-between;                
-                width: 70%;    
+                width: 130%;    
                 margin-bottom: 10px;
                 font-family: "Patrick Hand", cursive;
                 color: #01504D;
-                font-size: 20px;
+                font-size: 18px;
               }
               .div1{
                 display: flex;
@@ -648,7 +647,7 @@
             .paragraphePreorder{
             font-family: "Raleway", sans-serif;
             color:  #01504D;
-            padding: 2px 50px;
+            padding: 2px 10px;
             font-size: 15px;
             margin-bottom: 0px;
             font-weight: bold;

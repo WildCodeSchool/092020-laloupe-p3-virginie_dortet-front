@@ -23,14 +23,10 @@ function Author() {
           <h1 className="titreAuteur2">Auteure de livres pour enfants </h1>
           <p className="paragrapheAuteur">
             Auteure pour enfants je me suis lancée dans l'auto-édition.{" "}
-          </p>
-          <p className="paragrapheAuteur">
             Passionnée par la littérature, j'ai voulu allier mes engagements
-            environnementaux et ma passion de l'écriture.
-          </p>
-          <p className="paragrapheAuteur">
-            Très impliquée dans la protection de l'environnement, je veux écrire
-            des histoires pour les enfants et les sensibiliser.
+            environnementaux et ma passion de l'écriture. Très impliquée dans la
+            protection de l'environnement, je veux écrire des histoires pour les
+            enfants et les sensibiliser.
           </p>
         </div>
       </div>

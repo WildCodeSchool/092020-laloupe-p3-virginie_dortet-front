@@ -145,7 +145,7 @@ function UploadFilesNews({ setIsOpen }) {
 }
 
 UploadFilesNews.propTypes = {
-  setIsOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
 };
 
 UploadFilesNews.defaultProps = {

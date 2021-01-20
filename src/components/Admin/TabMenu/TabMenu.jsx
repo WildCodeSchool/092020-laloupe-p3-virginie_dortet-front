@@ -78,11 +78,7 @@ function TabMenu({ setIsLogin }) {
 }
 
 TabMenu.propTypes = {
-  setIsLogin: PropTypes.bool,
-};
-
-TabMenu.defaultProps = {
-  setIsLogin: false,
+  setIsLogin: PropTypes.func.isRequired,
 };
 
 export default TabMenu;

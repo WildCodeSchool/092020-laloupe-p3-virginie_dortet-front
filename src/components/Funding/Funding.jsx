@@ -35,15 +35,13 @@ function Funding() {
             <h2 className="titles">{partner.Name}</h2>
 
             <p className="description_partner">{partner.Description}</p>
-            <div className="container_image">
-              <a target="_blank" rel="noreferrer" href={partner.Link}>
-                <img
-                  className="inject_picture"
-                  src={`${API_URL}/public/images/${partner.Image_Name}`}
-                  alt={partner.Alt}
-                />
-              </a>
-            </div>
+            <a target="_blank" rel="noreferrer" href={partner.Link}>
+              <img
+                className="inject_picture"
+                src={`${API_URL}/public/images/${partner.Image_Name}`}
+                alt={partner.Alt}
+              />
+            </a>
           </div>
         ))}
       </div>
