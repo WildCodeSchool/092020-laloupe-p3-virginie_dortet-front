@@ -17,11 +17,7 @@ function MyBooks() {
 
   const displayBook = () => {
     axios
-      .get(`${API_URL}/api/livres`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .get(`${API_URL}/api/livres`)
       .then((res) => res.data)
       .then((data) => {
         setBooks(data);
