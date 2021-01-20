@@ -17,11 +17,7 @@ function MyNews() {
 
   const displayNew = () => {
     axios
-      .get(`${API_URL}/api/news`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .get(`${API_URL}/api/news`)
       .then((res) => res.data)
       .then((data) => {
         setNews(data);
