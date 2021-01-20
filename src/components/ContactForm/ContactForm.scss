@@ -98,9 +98,6 @@
   margin: 20px auto;
 
 }
-
-
-
   .envoyer{
       border-radius: 30px;
       background-color: #30908A;
@@ -113,6 +110,8 @@
   .envoyer:hover {
     background-color: #da980b;
     cursor: pointer;
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .titrePage {
@@ -181,6 +180,8 @@
   .envoyer:hover {
     background-color: #da980b;
     cursor: pointer;
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);    
   }
     }
   @media screen and (max-width: 670px) {
@@ -249,5 +250,7 @@
   .envoyer:hover {
     background-color: #da980b;
     cursor: pointer;
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
   }
   }

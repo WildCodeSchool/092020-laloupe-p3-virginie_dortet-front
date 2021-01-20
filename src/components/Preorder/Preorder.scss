@@ -316,6 +316,8 @@
     background-color: #da980b;
     color:  #01504D;
     cursor: pointer;
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
   }
 
   //------------------------------------------------------------------------------------
@@ -618,6 +620,8 @@
                 background-color: #da980b;
                 color:  #01504D;
                 cursor: pointer;
+                transition: all 0.3s ease-out;
+                transform: scale(1.1);
             }
     }
 
@@ -908,5 +912,7 @@
             background-color: #da980b;
             color:  #01504D;
             cursor: pointer;
+            transition: all 0.3s ease-out;
+            transform: scale(1.1);
         }
   }
