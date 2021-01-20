@@ -31,7 +31,10 @@ function Funding() {
             <h2>{partner.Name}</h2>
             <p>{partner.Description}</p>
             <a href={partner.Link}>
-              {/* <img src={`${API_URL}/public/images/${partner.Image_Name}`} alt="test" /> */}
+              <img
+                src={`${API_URL}/public/images/${partner.Image_Name}`}
+                alt={partner.Alt}
+              />
             </a>
           </div>
         ))}

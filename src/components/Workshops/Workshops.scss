@@ -31,11 +31,11 @@ $colorSand: #FEB250;
     padding: 30px 0;
 }
 .ateliers-images {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .ateliers-images img {
-    width: 400px;
+    width: 500px;
+    padding: 10px;
 }

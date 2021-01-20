@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import UploadFileBooks from "./UploadFileBooks";
-import "./MyBooks.scss";
+import UploadFilesFundings from "./UploadFilesFundings";
+import "./MyFundings.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function MyBooks() {
-  const [books, setBooks] = useState([]);
+function MyFundings() {
+  const [fundings, setFundings] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const openBook = () => {
+  const openFunding = () => {
     setIsOpen(!isOpen);
   };
 
-  const displayBook = () => {
+  const displayFunding = () => {
     axios
-      .get(`${API_URL}/api/livres`)
+      .get(`${API_URL}/api/fundings`)
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
-        setBooks(data);
+        setFundings(data);
       })
       .catch((err) => {
         alert(err.response.data.errorMessage);
@@ -27,18 +26,18 @@ function MyBooks() {
   };
 
   useEffect(() => {
-    displayBook();
+    displayFunding();
   }, [isOpen]);
 
   // Suppress Book
-  const deleteBook = (BookId) => {
+  const deleteFunding = (id) => {
     axios
-      .delete(`${API_URL}/api/livres/${BookId}`)
+      .delete(`${API_URL}/api/fundings/${id}`)
       .then((res) => res.data)
       .then((data) => {
         console.log(data);
         // appeler la fonction pour màj l'affichage
-        displayBook();
+        displayFunding();
       })
       .catch((err) => {
         alert(err.response.data.errorMessage);
@@ -48,31 +47,28 @@ function MyBooks() {
   return (
     <div>
       <div className="common-margin">
-        <h1>Mes Livres</h1>
-        <div className="table-books">
-          <h2>Liste des livres</h2>
+        <h1>Mes Partenaires</h1>
+
+        <div className="table-funding">
+          <h2>Liste des partenaires</h2>
           <table>
             <thead>
               <tr>
-                <th>Titre</th>
-                <th>Date de publication</th>
-                <th>Lien financement</th>
-                <th>Prix (en euros)</th>
+                <th>Nom</th>
+                <th>Lien</th>
                 <th>Supprimer</th>
               </tr>
             </thead>
             <tbody>
-              {books.map((book) => (
-                <tr key={book.BookId}>
-                  <td>{book.Title}</td>
-                  <td>{book.Publication}</td>
-                  <td>{book.Link}</td>
-                  <td>{book.Price}</td>
+              {fundings.map((funding) => (
+                <tr key={funding.id}>
+                  <td>{funding.Name}</td>
+                  <td>{funding.Link}</td>
                   <td>
                     <button
-                      className="suppressbook-btn"
+                      className="supressfunding-btn"
                       onClick={() => {
-                        deleteBook(book.BookId);
+                        deleteFunding(funding.id);
                       }}
                       type="button"
                     >
@@ -85,13 +81,13 @@ function MyBooks() {
           </table>
         </div>
 
-        <button type="button" className="addbook-btn" onClick={openBook}>
-          Ajouter un livre
+        <button className="add-funding" type="button" onClick={openFunding}>
+          Ajouter un partenaire
         </button>
-        {isOpen && <UploadFileBooks setIsOpen={setIsOpen} />}
+        {isOpen && <UploadFilesFundings setIsOpen={setIsOpen} />}
       </div>
     </div>
   );
 }
 
-export default MyBooks;
+export default MyFundings;

@@ -7,6 +7,7 @@
     background-color: #FEB250;
     height: 100%;
     width: 100%;
+    
   }  
   
   .titrePagePreorder {
@@ -14,7 +15,7 @@
     font-family: "Patrick Hand", cursive;
     color: #01504D;
     font-size: 60px;
-    margin-top: -30px;
+    margin-top: 20px;
     margin-bottom: 30px;
   }
 
@@ -40,23 +41,21 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
+      padding-top: 40px;
 }
-.containerNamesPreorder{
-    display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      width: 67%;
-}
+// .containerNamesPreorder{
+//     display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       flex-wrap: wrap;
+//       width: 67%;
+// }
 
   .FormPreorder {
       margin-top: 70px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       padding-bottom: 100px;
-      width: 100%;
-  }
+      width: 80%;
+    }
 
   .paraphFormPreorder {
     font-family: "Raleway", sans-serif;
@@ -66,7 +65,7 @@
     margin-bottom: 10px;  
   }
   
-  label {
+  .FormPreorder label {
     font-family: "Raleway", sans-serif;
     color:  #01504D;
     font-size: 20px;
@@ -74,13 +73,34 @@
   }
 
 
+  .namelabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 60px;
+  }
 
+  .name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+  }
+  .firstname{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
   .inputNamePreorder {
-    margin-top: 100px;
-    margin-bottom: 10px;
+    // margin-top: 100px;
+    // margin-bottom: 10px;
     padding-left: 15px;
-    width:60%;
+    width:70%;
     height:50px;
     padding-left:15px;
     font-size:20px;
@@ -88,41 +108,109 @@
 }
 
 .inputFirstNamePreorder{
-  width:60%;
+  width:70%;
   height:50px;
   padding-left:15px;
   font-size:20px;
   margin:20px auto;
 }
+
+.clientEmail{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  // width: 100%;
+  margin-left: 170px;
+  margin-top: 20px;
+}
+
 .inputEmailPreorder{
-  width:60%;
+  width:40%;
   height:50px;
   padding-left:15px;
   font-size:20px;
-  margin:20px auto;
+  margin: 20px 100px;
+}
+
+.phone{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  // width: 100%;
+  margin-left: 170px;
+  margin-top: 20px;
 }
 
 .inputTelephonePreorder{
-    width:60%;
-    height:50px;
-    padding-left:15px;
-    font-size:20px;
-    margin:20px auto;
+  width:40%;
+  height:50px;
+  padding-left:15px;
+  font-size:20px;
+  margin:20px 55px;
+  }
+
+  .adresse{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  // width: 100%;
+    margin-left: 170px;
+    margin-top: 20px;
   }
   .inputAdressPreorder{
-    width:60%;
+    width:70%;
     height:50px;
     padding-left:15px;
     font-size:20px;
-    margin:20px auto;
+    margin:20px 80px;
+  }
+
+  .codePostal{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  // width: 100%;
+    margin-left: 170px;
+    margin-top: 20px;
   }
 
   .inputCpPreorder{
+    width:40%;
+    height:50px;
+    padding-left:15px;
+    font-size:20px;
+    margin:20px 45px;;
+  }
+  .ville{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  // width: 100%;
+    margin-left: 170px;
+    margin-top: 20px;
+  }
+
+  .inputAdressPreorder2{
     width:60%;
     height:50px;
     padding-left:15px;
     font-size:20px;
-    margin:20px auto;
+    margin:0px 115px;
+  }
+
+  .message{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  // width: 100%;
+    margin-left: 170px;
+    margin-top: 20px;
   }
 
   .inputMessagePreorder{
@@ -131,16 +219,15 @@
     padding-left:15px;
     padding-top: 15px;
     font-size:20px;
-    margin:20px auto;
+    margin:20px ;
   }
   
   .sectionAPI {
     margin-top: 40px;
     margin-bottom: 40px;
     padding-left: 15px;
-    width:60%;
-    padding-left:15px;
-      
+    width:100%;
+    padding-left:15px;      
   }
 
   .choix{
@@ -148,13 +235,15 @@
     font-size:20px;
     color: #01504D;
     margin-bottom: 40px;
+    margin-left: 320px;
   }
 
   .listeLivre {
-      display:flex;
-      flex-direction: column;
-      align-items:center;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
     list-style-type: none;
+    width: 90%;
     padding-left: 40px;
     margin-bottom: 10px;
   }
@@ -184,19 +273,22 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     
-    width: 70%;    
+    width: 50%;    
     margin-bottom: 10px;
     font-family: "Patrick Hand", cursive;
     color: #01504D;
+    font-size: 25px;
   }
   .div1{
-      display: flex;
-      flex-direction: row;
-      justify-content:space-around;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
   }
   .div2{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content:space-around;
     
 }
@@ -212,15 +304,14 @@
 }
 
 
-  .envoyerPreorder{
-      border-radius: 30px;
-      background-color: #01504D;
-      color:  #FEB250;
-      border: none;
-      font-size: 25px;
-      padding: 15px;
-      
-      width: 250px;
+.envoyerPreorder{
+    border-radius: 30px;
+    background-color: #01504D;
+    color:  #FEB250;
+    border: none;
+    font-size: 25px;
+    padding: 15px;      
+    width: 250px;
   }
   .envoyerPreorder:hover {
     background-color: #da980b;
@@ -254,100 +345,215 @@
                 margin-bottom: 0px;
                 font-weight: bold;
                 }
-                .inputNamePreorder {
-                margin-top: 0px;      
+                
+                .containerFormPreorder { 
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 100%;
+                  padding-top: 30px;
+            }
+                        
+              .FormPreorder {
+                  margin-top: 70px;
+                  padding-bottom: 100px;
+                  width: 80%;
+                }
+            
+              .paraphFormPreorder {
+                font-family: "Raleway", sans-serif;
+                color:  #01504D;
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;  
+              }
+              
+              label {
+                font-family: "Raleway", sans-serif;
+                color:  #01504D;
+                font-size: 20px;
+                font-weight: bold;
+              }
+            
+            
+              .namelabel{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
+                margin-bottom: 30px;
+                padding-left: 60px;
+              }
+            
+              .name{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                
+              }
+              .firstname{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+              }
+            
+              .inputNamePreorder {
+                // margin-top: 100px;
+                // margin-bottom: 10px;
                 padding-left: 15px;
                 width:80%;
                 height:50px;
                 padding-left:15px;
                 font-size:20px;
-                margin-bottom:10px; 
+                margin:20px auto; 
             }
+            
             .inputFirstNamePreorder{
-                width:80%;
-                height:50px;
-                padding-left:15px;
-                font-size:20px;
-                margin:10px auto;
-            }
-            .inputEmailPreorder {
-                width:80%;
-                height:50px;
-                padding-left:15px;
-                font-size:20px;
-                margin:10px auto;
-            }
-
-            .inputTelephonePreorder {
-                width:80%;
-                height:50px;
-                padding-left:15px;
-                font-size:20px;
-                margin:10px auto;
-            }
-
-            .inputAdressPreorder {
-                width:80%;
-                height:50px;
-                padding-left:15px;
-                font-size:20px;
-                margin:10px auto;
-            }
-
-            .inputCpPreorder {
-                width:80%;
-                height:50px;
-                padding-left:15px;
-                font-size:20px;
-                margin:10px auto;
-            }
-
-            .inputAdressPreorder {
-                width:80%;
-                height:50px;
-                padding-left:15px;
-                font-size:20px;
-                margin:10px auto;
-            }
-
-            .inputMessagePreorder{
               width:80%;
-              // height:50px;
+              height:50px;
               padding-left:15px;
-              padding-top: 15px;
               font-size:20px;
-              margin:10px auto;
+              margin:20px auto;
             }
-
-            .sectionAPI {
-                margin-top: 40px;
-                margin-bottom: 40px;
-                padding-left: 15px;
+            
+            .clientEmail{
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              // width: 100%;
+              margin-left: 90px;
+              margin-top: 20px;
+            }
+            
+            .inputEmailPreorder{
+              width:90%;
+              height:50px;
+              padding-left:15px;
+              font-size:20px;
+              margin: 20px 100px;
+            }
+            
+            .phone{
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              // width: 100%;
+              margin-left: 90px;
+              margin-top: 20px;
+            }
+            
+            .inputTelephonePreorder{
+              width:50%;
+              height:50px;
+              padding-left:15px;
+              font-size:20px;
+              margin:20px 55px;
+              }
+            
+              .adresse{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+              // width: 100%;
+                margin-left: 90px;
+                margin-top: 20px;
+              }
+              .inputAdressPreorder{
                 width:90%;
-                padding-left:20px;
-                  
+                height:50px;
+                padding-left:15px;
+                font-size:20px;
+                margin:20px 80px;
+              }
+            
+              .codePostal{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+              // width: 100%;
+                margin-left: 90px;
+                margin-top: 20px;
+              }
+            
+              .inputCpPreorder{
+                width:40%;
+                height:50px;
+                padding-left:15px;
+                font-size:20px;
+                margin:20px 45px;;
+              }
+              .ville{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+              // width: 100%;
+                margin-left: 90px;
+                margin-top: 20px;
+              }
+            
+              .inputAdressPreorder2{
+                width:60%;
+                height:50px;
+                padding-left:15px;
+                font-size:20px;
+                margin:0px 115px;
+              }
+            
+              .message{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+              // width: 100%;
+                margin-left: 100px;
+                margin-top: 20px;
+              }
+            
+              .inputMessagePreorder{
+                width:80%;
+                // height:50px;
+                padding-left:15px;
+                padding-top: 15px;
+                font-size:20px;
+                margin-top: 20px;
+                margin-left: 30px;
+              }
+              
+              .sectionAPI {
+                margin-top: 40px;
+                margin-bottom: 40px;                
+                width:100%;
+                padding-left:15px;      
               }
             
               .choix{
                 font-family: "Raleway", sans-serif;
-                font-size:20px;
+                font-size:30px;
                 color: #01504D;
-                margin-left: 20px;
                 margin-bottom: 40px;
+                margin-left: 180px;
               }
             
               .listeLivre {
-                  display:flex;
-                  flex-direction: column;
-                  align-items:center;
+                display:flex;
+                flex-direction: column;
+                align-items:center;
                 list-style-type: none;
+                width: 90%;
                 padding-left: 40px;
                 margin-bottom: 10px;
               }
             
               .checkbox-round {
-                width: 1.2em;
-                height: 1.2em;
+                width: 1.4em;
+                height: 1.4em;
                 background-color: white;
                 border-radius: 50%;
                 vertical-align: middle;
@@ -368,28 +574,30 @@
                 display:flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                justify-content: space-between;
-                
-                width: 80%;    
+                justify-content: space-between;                
+                width: 70%;    
                 margin-bottom: 10px;
                 font-family: "Patrick Hand", cursive;
                 color: #01504D;
+                font-size: 20px;
               }
               .div1{
-                  display: flex;
-                  flex-direction: row;
-                  justify-content:space-around;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-around;
               }
               .div2{
                 display: flex;
                 flex-direction: row;
+                align-items: center;
                 justify-content:space-around;
                 
             }
             
             .quantityPreorder{    
                 margin-left: 50px;
-                margin-right: 50px;
+                margin-right: 20px;
             }
             .quantity{    
                 width: 40px;
@@ -397,12 +605,11 @@
                 padding-left: 6px;
             }
             
-
             .envoyerPreorder{
                 border-radius: 30px;
                 background-color: #01504D;
                 color:  #FEB250;
-                margin-top: 20px;
+                margin-top: 30px;
                 border: none;
                 font-size: 25px;
                 padding: 15px;
@@ -442,134 +649,253 @@
             margin-bottom: 0px;
             font-weight: bold;
             }
-            .inputNamePreorder {
-            margin-top: 0px;      
-            padding-left: 15px;
-            width:80%;
-            height:50px;
-            padding-left:15px;
-            font-size:15px;
-            margin-bottom:10px; 
-        }
-        .inputFirstNamePreorder{
-            width:80%;
-            height:50px;
-            padding-left:15px;
-            font-size:15px;
-            margin:10px auto;
-        }
-        .inputEmailPreorder{
-            width:80%;
-            height:50px;
-            padding-left:15px;
-            font-size:15px;
-            margin:10px auto;
-        }
-        .inputTelephonePreorder{
-            width:80%;
-            height:50px;
-            padding-left:15px;
-            font-size:15px;
-            margin:10px auto;
-        }
-        .inputAdressPreorder{
-            width:80%;
-            height:50px;
-            padding-left:15px;
-            font-size:15px;
-            margin:10px auto;
-        }
 
-        .inputCpPreorder{
-            width:80%;
-            height:50px;
-            padding-left:15px;
-            font-size:15px;
-            margin:10px auto;
-        }
-
-        .inputMessagePreorder{
-          width:80%;
-          // height:50px;
-          padding-left:15px;
-          padding-top: 15px;
-          font-size:20px;
-          margin:10px auto;
-        }
-
-        .sectionAPI {
-            margin-top: 40px;
-            margin-bottom: 40px;            
-            width:80%; 
-          }
-        
-          .choix{
-            font-family: "Raleway", sans-serif;
-            font-size:15px;
-            color: #01504D;
-            text-align:center;
-            margin-bottom: 40px;
-          }
-        
-          .listeLivre {
-              display:flex;
-              flex-direction: column;
-              align-items:center;
-            list-style-type: none;
-            padding-left: 2px;
-            margin-bottom: 10px;
-          }
-        
-          .checkbox-round {
-            width: 1.1em;
-            height: 1.1em;
-            background-color: white;
-            border-radius: 50%;
-            vertical-align: middle;
-            border: 1px solid #ddd;
-            margin-right: 10px;
-            -webkit-appearance: none;
-            outline: none;
-            cursor: pointer;
-        }
-        
-        .checkbox-round:checked {
-            background-color: #01504D;
-        }
-        
-        
-        
-          .titreLivre {
-            display:flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;            
-            width: 100%;    
-            margin-bottom: 10px;
-            font-family: "Patrick Hand", cursive;
-            color: #01504D;
-          }
-          .div1{
-              display: flex;
-              flex-direction: row;
-              justify-content:space-around;
-          }
-          .div2{
-            display: flex;
-            flex-direction: row;
-            justify-content:space-around;
+            .containerFormPreorder { 
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 100%;
+                  padding-top: 0px;
+            }
+                        
+              .FormPreorder {
+                  margin-top: 70px;
+                  padding-bottom: 100px;
+                  width: 80%;
+                }
             
-        }
-        
-        .quantityPreorder{    
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        .quantity{    
-            width: 30px;
-            height:20px;
-            padding-left: 4px;
-        }
+              .paraphFormPreorder {
+                font-family: "Raleway", sans-serif;
+                color:  #01504D;
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;  
+              }
+              
+              label {
+                font-family: "Raleway", sans-serif;
+                color:  #01504D;
+                font-size: 20px;
+                font-weight: bold;
+              }
+            
+            
+              .namelabel{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 10px;
+                padding-left: 0px;
+              }
+            
+              .name{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                
+              }
+              .firstname{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+              }
+            
+              .inputNamePreorder {
+                padding-left: 15px;
+                width:100%;
+                height:50px;
+                padding-left:15px;
+                font-size:20px;
+                margin:20px auto; 
+            }
+            
+            .inputFirstNamePreorder{
+              width:100%;
+              height:50px;
+              padding-left:15px;
+              font-size:20px;
+              margin:20px auto;
+            }
+            
+            .clientEmail{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-left: 0px;
+              margin-top: 20px;
+            }
+            
+            .inputEmailPreorder{
+              width:100%;
+              height:50px;
+              padding-left:15px;
+              font-size:20px;
+              margin: 20px auto;
+            }
+            
+            .phone{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-left: 0px;
+              margin-top: 20px;
+            }
+            
+            .inputTelephonePreorder{
+              width:100%;
+              height:50px;
+              padding-left:15px;
+              font-size:20px;
+              margin:20px auto;
+              }
+            
+              .adresse{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 0px;
+                margin-top: 20px;
+              }
+              .inputAdressPreorder{
+                width:100%;
+                height:50px;
+                padding-left:15px;
+                font-size:20px;
+                margin:20px auto;
+              }
+            
+              .codePostal{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 0px;
+                margin-top: 20px;
+              }
+            
+              .inputCpPreorder{
+                width:100%;
+                height:50px;
+                padding-left:15px;
+                font-size:20px;
+                margin:20px auto;
+              }
+              .ville{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-left: 0px;
+                margin-top: 20px;
+              }
+            
+              .inputAdressPreorder2{
+                width:100%;
+                height:50px;
+                padding-left:15px;
+                font-size:20px;
+                margin-top: 20px;
+                
+              }
+            
+              .message{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0px;
+                margin-top: 20px;
+              }
+            
+              .inputMessagePreorder{
+                width:100%;
+                padding-left:15px;
+                padding-top: 15px;
+                font-size:20px;
+                margin-top: 20px;
+                margin-left: 30px;
+              }
+              
+              .sectionAPI {
+                margin-top: 30px;
+                margin-bottom: 40px;                
+                width:100%;
+                padding-left:0px;      
+              }
+            
+              .choix{
+                font-family: "Raleway", sans-serif;
+                font-size:18px;
+                color: #01504D;
+                margin-bottom: 40px;
+                margin-left: 80px;
+              }
+            
+              .listeLivre {
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                list-style-type: none;
+                width: 100%;
+                padding-left: 20px;
+                margin-bottom: 15px;
+              }
+            
+              .checkbox-round {
+                width: 1.2em;
+                height: 1.2em;
+                background-color: white;
+                border-radius: 50%;
+                vertical-align: middle;
+                border: 1px solid #ddd;
+                margin-right: 10px;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+            }
+            
+            .checkbox-round:checked {
+                background-color: #01504D;
+            }
+                        
+            
+              .titreLivre {
+                display:flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;                
+                width: 100%;    
+                margin-bottom: 10px;
+                font-family: "Patrick Hand", cursive;
+                color: #01504D;
+                font-size: 15px;
+              }
+              .div1{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-around;
+              }
+              .div2{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-around;
+                
+            }
+            
+            .quantityPreorder{    
+                margin-left: 50px;
+                margin-right: 5px;
+            }
+            .quantity{    
+                width: 40px;
+                height:30px;
+                padding-left: 6px;
+            }
             .envoyerPreorder{
             border-radius: 30px;
             background-color: #01504D;

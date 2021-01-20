@@ -1,18 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./MyNews.scss";
+import "./MyFundings.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function UploadFilesNews({ setIsOpen }) {
+function UploadFilesFundings({ setIsOpen }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
-  const [title, setTitre] = useState("");
+  const [name, setTitre] = useState("");
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
-  const [address, setAddress] = useState("");
-  const [alt, setAlt] = useState("");
+  const [Alt, setAlt] = useState("");
+  const [Link, setLink] = useState("");
 
   const onChangeHandle = (event) => {
     console.log(event.target.files);
@@ -31,7 +30,7 @@ function UploadFilesNews({ setIsOpen }) {
       data.append("file", selectedFile);
       console.table("form", data.get("file"));
       axios
-        .post(`${API_URL}/api/upload/news`, data)
+        .post(`${API_URL}/api/upload/fundings`, data)
         .then((res) => res.data)
         .then((res) => {
           setFileName(res.filename);
@@ -44,19 +43,18 @@ function UploadFilesNews({ setIsOpen }) {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!title || !description || !date || !address || !filename) {
+    if (!name || !description) {
       alert(
-        "Vous devez renseigner au minimum un titre, une description, une date et une adresse."
+        "Vous devez renseigner au minimum un nom de partenaire, et une description."
       );
     } else {
       axios
-        .post(`${API_URL}/api/news`, {
-          Title: title,
+        .post(`${API_URL}/api/fundings`, {
+          Name: name,
           Description: description,
-          Date: date,
-          Address: address,
           Image_Name: filename,
-          Alt: alt,
+          Alt,
+          Link,
         })
         .then((res) => res.data)
         .then(() => {
@@ -70,52 +68,38 @@ function UploadFilesNews({ setIsOpen }) {
   };
 
   return (
-    <div className="actualites">
+    <div>
       <form onSubmit={handleSubmit}>
-        <div className="ateliers">
-          <div className="actus">
-            <label htmlFor="title">
-              Titre de l'actualité
+        <div className="container_partenaires">
+          <div className="leslabels">
+            <label className="nomPart" htmlFor="name">
+              Nom du Partenaire
               <input
                 type="text"
-                name="title"
+                name="Partnername"
                 onChange={(e) => setTitre(e.target.value)}
               />
             </label>
-            <label htmlFor="date">
-              Date de l'actualité
-              <input
-                type="date"
-                name="date"
-                onChange={(e) => setDate(e.target.value)}
-              />
-            </label>
-            <label htmlFor="adresse">
-              Adresse de l'actualité
-              <input
-                type="text"
-                name="adresse"
-                onChange={(e) => setAddress(e.target.value)}
-              />
-            </label>
-            <label className="desc" htmlFor="description">
-              Description de l'actualité
+            <label className="descriptPart" htmlFor="description">
+              Description du Partenaire
               <textarea
                 type="text"
                 name="description"
+                cols="60"
+                rows="10"
                 onChange={(e) => setDescription(e.target.value)}
-                maxLength="800"
               />
             </label>
-            <label htmlFor="titre">
-              Alt de l'actualité
+            <label className="LinkPart" htmlFor="Link">
+              Lien du Partenaire
               <input
-                type="text"
-                name="alt"
-                onChange={(e) => setAlt(e.target.value)}
+                className="inputPart"
+                type="url"
+                name="Link"
+                onChange={(e) => setLink(e.target.value)}
               />
             </label>
-            <label htmlFor="image">
+            <label className="PictPart" htmlFor="image">
               Insérer une image
               <input
                 type="file"
@@ -124,19 +108,23 @@ function UploadFilesNews({ setIsOpen }) {
                 onChange={onChangeHandle}
               />
             </label>
-            <button className="btn" type="button" onClick={onClickHandle}>
-              Téléchargez
+            <label className="AltPart" htmlFor="Alt">
+              Description de l'image
+              <input
+                type="text"
+                name="alt"
+                onChange={(e) => setAlt(e.target.value)}
+              />
+            </label>
+            <button className="dl-btn" type="button" onClick={onClickHandle}>
+              Téléchargez l'image
             </button>
-            <img
-              className="visualize-img"
-              src={`${API_URL}/public/images/${filename}`}
-              alt=""
-            />
+            <img src={`${API_URL}/public/images/${filename}`} alt="" />
           </div>
         </div>
-        <div className="submit-news">
-          <button type="submit" value="submit">
-            Soumettre
+        <div className="submit-Partner">
+          <button className="EnvoyerPartner" type="submit" value="submit">
+            Ajouter le Partenaire
           </button>
         </div>
       </form>
@@ -144,12 +132,12 @@ function UploadFilesNews({ setIsOpen }) {
   );
 }
 
-UploadFilesNews.propTypes = {
+UploadFilesFundings.propTypes = {
   setIsOpen: PropTypes.bool,
 };
 
-UploadFilesNews.defaultProps = {
+UploadFilesFundings.defaultProps = {
   setIsOpen: false,
 };
 
-export default UploadFilesNews;
+export default UploadFilesFundings;

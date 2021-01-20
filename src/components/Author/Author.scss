@@ -103,7 +103,7 @@ $colorSand: #feb250;
   align-items: center;
 }
 .ptitsinge {
-  z-index: 1000;
+  z-index: 1;
   margin-left: 750px;
   margin-top: -700px;
   height: 220px;
@@ -183,7 +183,7 @@ $colorSand: #feb250;
     align-items: center;
   }
   .ptitsinge {
-    z-index: 1000;
+    z-index: 1;
     margin-left: 470px;
     margin-top: -640px;
     height: 140px;
@@ -199,7 +199,9 @@ $colorSand: #feb250;
     position: relative;
   }
 }
-@media screen and (max-width: 670px) {
+
+  
+  @media screen and (max-width: 670px) {
   .video {
     display: none;
   }
