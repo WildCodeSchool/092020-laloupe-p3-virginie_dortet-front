@@ -31,7 +31,6 @@ function UploadFileBooks({ setIsOpen }) {
   const onChangeAlt = (event) => {
     const alt = event.target.value;
     const id = event.target.name.replace(/^\D+/g, "");
-    // setAlt(alt);
     const row = images.find((image) => image.id === id);
     if (row) {
       row.alt = alt;
@@ -279,7 +278,7 @@ function UploadFileBooks({ setIsOpen }) {
         {/* Submit button  */}
         <div className="submit-book">
           <button type="submit" value="submit">
-            Ajouter un livre
+            Soumettre
           </button>
         </div>
       </form>

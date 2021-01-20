@@ -62,8 +62,12 @@ function TabMenu({ setIsLogin }) {
               </li>
             );
           })}
-          <li>
-            <button type="submit" onClick={handleClick}>
+          <li className="nav-text">
+            <button
+              className="disconnect-btn"
+              type="submit"
+              onClick={handleClick}
+            >
               Déconnexion
             </button>
           </li>
