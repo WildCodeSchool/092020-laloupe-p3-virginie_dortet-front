@@ -9,7 +9,7 @@ function Author() {
   return (
     <div className="sectionAuteur">
       <Arbuste />
-      <h1 className="titrePage">L' Auteure</h1>
+      <h1 className="titrePageAuteur">L' Auteure</h1>
       <div className="flexybox">
         <div className="PhotoVirginie">
           <img

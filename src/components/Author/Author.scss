@@ -16,13 +16,13 @@ $colorSand: #feb250;
   height: 100%;
   width: 100%;
 }
-.titrePage {
+.titrePageAuteur {
   text-align: center;
   font-family: "Patrick Hand", cursive;
   color: #ffe7cb;
   font-size: 60px;
-  margin-top: 100px;
-  margin-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 .animaux {
   display: flex;
@@ -30,7 +30,7 @@ $colorSand: #feb250;
   padding-bottom: 30px;
 }
 .animaux img {
-  width: 50%;
+  width: 40%;
 }
 
 .titrevideo {
@@ -40,6 +40,7 @@ $colorSand: #feb250;
   flex-direction: row;
   justify-content: center;
   margin-top: -30px;
+  margin-bottom: 50px;
   font-size: 20px;
 }
 .flexybox {
@@ -47,7 +48,7 @@ $colorSand: #feb250;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  margin-bottom: 180px;
+  margin-bottom: 220px;
 }
 .PhotoVirginie {
   display: flex;
@@ -56,16 +57,13 @@ $colorSand: #feb250;
   align-items: center;
 }
 .photoVirginie {
-  width: 290px;
-  height: 300px;
+  width: 380px;
+  height: 400px;
   border-radius: 50%;
   padding: 40px;
   margin-left: 40px;
 }
-.photoVirginie:hover {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.4);
-}
+
 .presentationVirginie {
   display: flex;
   flex-direction: column;
@@ -105,12 +103,12 @@ $colorSand: #feb250;
 .ptitsinge {
   z-index: 1;
   margin-left: 750px;
-  margin-top: -700px;
+  margin-top: -680px;
   height: 220px;
   position: absolute;
 
   -webkit-margin-start: 380px;
-  -webkit-margin-before: -360px;
+  -webkit-margin-before: -340px;
 }
 
 .video {
@@ -121,13 +119,14 @@ $colorSand: #feb250;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .titrePage {
+    
+  .titrePageAuteur {
     text-align: center;
     font-family: "Patrick Hand", cursive;
     color: #ffe7cb;
-    font-size: 50px;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    font-size: 40px;
+    margin-top: -80px;
+    margin-bottom: 60px;
   }
   .flexybox {
     display: flex;
@@ -141,12 +140,12 @@ $colorSand: #feb250;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 60px;
+    padding-left: 0px;
     align-items: center;
   }
   .photoVirginie {
-    width: 220px;
-    height: 240px;
+    width: 300px;
+    height: 320px;
     border-radius: 50%;
   }
 
@@ -198,6 +197,24 @@ $colorSand: #feb250;
     margin-bottom: 100px;
     position: relative;
   }
+  .titrevideo {
+    font-family: "Raleway", sans-serif;
+    color: #ffe7cb;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -80px;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+  .animaux {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+  .animaux img {
+    width: 50%;
+  }
 }
 
   
@@ -208,13 +225,13 @@ $colorSand: #feb250;
   .ptitsinge {
     display: none;
   }
-  .titrePage {
+  .titrePageAuteur {
     text-align: center;
     font-family: "Patrick Hand", cursive;
     color: #ffe7cb;
     font-size: 30px;
     margin-top: -130px;
-    margin-bottom: 20px;
+    margin-bottom: -10px;
   }
   .flexybox {
     display: flex;
@@ -225,10 +242,12 @@ $colorSand: #feb250;
     margin-bottom: 80px;
   }
   .photoVirginie {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 300px;
     border-radius: 50%;
-    margin-bottom: 30px;
+    margin-bottom: -10px;
+    margin-left:10px;
+    margin-right:10px;
   }
   .presentationVirginie {
     display: flex;
@@ -259,5 +278,18 @@ $colorSand: #feb250;
     margin-bottom: 8px;
     text-align: center;
     text-justify: auto;
+  }
+  .titrevideo {
+    display: none;
+  }
+  .animaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 40px;
+    margin-top: -100px;
+  }
+  .animaux img {
+    width: 70%;
   }
 }
