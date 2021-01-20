@@ -272,8 +272,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    
-    width: 50%;    
+    width: 100%;    
     margin-bottom: 10px;
     font-family: "Patrick Hand", cursive;
     color: #01504D;
@@ -644,7 +643,7 @@
             .paragraphePreorder{
             font-family: "Raleway", sans-serif;
             color:  #01504D;
-            padding: 2px 50px;
+            padding: 2px 10px;
             font-size: 15px;
             margin-bottom: 0px;
             font-weight: bold;

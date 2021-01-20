@@ -39,3 +39,20 @@ $colorSand: #FEB250;
     width: 500px;
     padding: 10px;
 }
+
+
+@media screen and (max-width: 670px) {
+.bg-ateliers h1 {
+    font-size: 30px;
+}
+
+.bg-ateliers p {
+    font-size: 1.2rem;
+}
+
+.ateliers-images img {
+    width: 400px; 
+    padding: 30px;
+}
+
+}
