@@ -82,12 +82,12 @@
 }
 @media screen and (max-width: 670px) {
   .news h1 {
-    margin-bottom: -50px;
+    margin-bottom: 20px;
     margin-top: -50px;
     font-size: 2.5rem;
   }
   .paragraphe p {
-    font-size: 10px;
+    font-size: 15px;
     text-justify: auto;
   }
   .img {
@@ -109,4 +109,19 @@
     width: 100px;
     margin-bottom: -15px;
   }
+  .css {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.new {
+  padding-left:50px;
+}
+.paragraphe{
+  padding-top: 0px;
+  padding-bottom: 40px;
+}
+.police {
+  font-size: 1.2rem;
+}
 }
