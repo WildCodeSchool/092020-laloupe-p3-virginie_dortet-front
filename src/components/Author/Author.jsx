@@ -3,6 +3,7 @@ import "./Author.scss";
 import Arbuste from "../Arbuste/Arbuste";
 import photoVirginie from "../../../public/picturesAuthor/virginie_dortet.jpg";
 import ptitsinge from "../../../public/picturesAuthor/singeSoloFDtransparent.png";
+import animaux from "../../../public/picturesAuthor/animaux.png";
 
 function Author() {
   return (
@@ -44,6 +45,12 @@ function Author() {
           frameBorder="0"
           allowFullScreen
         />
+      </div>
+      <div className="titrevideo">
+        <p>Illustration du livre "Monsieur Loyal" en live.</p>
+      </div>
+      <div className="animaux">
+        <img src={animaux} alt="" />
       </div>
     </div>
   );

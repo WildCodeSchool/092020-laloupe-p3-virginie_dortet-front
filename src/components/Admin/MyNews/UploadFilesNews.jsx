@@ -70,11 +70,10 @@ function UploadFilesNews({ setIsOpen }) {
   };
 
   return (
-    <div>
+    <div className="actualites">
       <form onSubmit={handleSubmit}>
-        {/* Informations about the new */}
-        <div>
-          <div>
+        <div className="ateliers">
+          <div className="actus">
             <label htmlFor="title">
               Titre de l'actualité
               <input
@@ -99,12 +98,13 @@ function UploadFilesNews({ setIsOpen }) {
                 onChange={(e) => setAddress(e.target.value)}
               />
             </label>
-            <label htmlFor="description">
+            <label className="desc" htmlFor="description">
               Description de l'actualité
-              <input
+              <textarea
                 type="text"
                 name="description"
                 onChange={(e) => setDescription(e.target.value)}
+                maxLength="800"
               />
             </label>
             <label htmlFor="titre">
@@ -124,7 +124,7 @@ function UploadFilesNews({ setIsOpen }) {
                 onChange={onChangeHandle}
               />
             </label>
-            <button type="button" onClick={onClickHandle}>
+            <button className="btn" type="button" onClick={onClickHandle}>
               Téléchargez
             </button>
             <img
@@ -134,8 +134,7 @@ function UploadFilesNews({ setIsOpen }) {
             />
           </div>
         </div>
-        {/* Submit news  */}
-        <div className="submit-new">
+        <div className="submit-news">
           <button type="submit" value="submit">
             Soumettre
           </button>
