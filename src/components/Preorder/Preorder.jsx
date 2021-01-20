@@ -51,14 +51,12 @@ const Preorder = () => {
   };
 
   const isCheck = (id) => {
-    console.log(livres);
     const temp = livres;
     temp[id].active = !temp[id].active;
     setLivres(temp);
   };
 
   const handleQuantity = (id, e) => {
-    console.log(livres);
     const temp = livres;
     temp[id].number = e.target.value;
     setLivres(temp);
@@ -77,9 +75,7 @@ const Preorder = () => {
       alert("Merci de remplir tous les champs");
     } else {
       const livresbuyyed = livres.filter((el) => el.active === true);
-      // console.log(livresbuyyed);
       const livresquantified = livresbuyyed.filter((el2) => el2.number > 0);
-      console.log(livresquantified);
 
       axios
         .post(`${API_URL}/api/envoiemail`, {
@@ -94,9 +90,6 @@ const Preorder = () => {
           livreschoisis: livresquantified,
         })
         .then((res) => res.data)
-        .then((data) => {
-          console.log(data);
-        })
         .catch((err) => {
           alert(err);
         });
@@ -113,7 +106,6 @@ const Preorder = () => {
       });
   }, []);
 
-  console.log(livres);
   return (
     <div className="sectionPreorder" id="preorder">
       <Arbuste />
@@ -240,6 +232,7 @@ const Preorder = () => {
                       id={livre.id}
                       name={livre.Title}
                       type="checkbox"
+                      value="checkbox"
                       onClick={() => isCheck(id)}
                     />
                     {livre.Title}

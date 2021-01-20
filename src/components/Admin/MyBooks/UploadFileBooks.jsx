@@ -5,6 +5,8 @@ import "./MyBooks.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
+const token = localStorage.getItem("KALA_TOKEN");
+
 const images = [];
 
 function UploadFileBooks({ setIsOpen }) {
@@ -25,7 +27,6 @@ function UploadFileBooks({ setIsOpen }) {
     } else {
       images.push({ id, img: file.name, file });
     }
-    console.log(images);
   };
 
   const onChangeAlt = (event) => {
@@ -37,7 +38,6 @@ function UploadFileBooks({ setIsOpen }) {
     } else {
       images.push({ id, alt });
     }
-    console.log(images);
   };
 
   // Method to validate images formats
@@ -51,7 +51,6 @@ function UploadFileBooks({ setIsOpen }) {
         image.file.type !== "image/jpg" &&
         image.file.type !== "image/png"
       ) {
-        console.log(image);
         i += 1;
         msg += `${image.id},`;
       }
@@ -92,14 +91,22 @@ function UploadFileBooks({ setIsOpen }) {
       );
     } else {
       axios
-        .post(`${API_URL}/api/livres`, {
-          Title: title,
-          Description: description,
-          Price: price,
-          Link: ulule,
-          Publication: date,
-          Images: images,
-        })
+        .post(
+          `${API_URL}/api/livres`,
+          {
+            Title: title,
+            Description: description,
+            Price: price,
+            Link: ulule,
+            Publication: date,
+            Images: images,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then((data) => {
           upLoadImages(data.BookId);

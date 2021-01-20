@@ -18,7 +18,6 @@ function Profile() {
       })
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
         setUsers(data);
       })
       .catch((err) => {
