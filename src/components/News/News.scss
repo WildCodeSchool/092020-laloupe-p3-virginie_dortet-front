@@ -22,10 +22,13 @@
   padding: 20px;
   padding-left: 100px;
 }
-
+.police {
+  font-family: "Patrick Hand", cursive;
+}
 .equipe {
   height: 100px;
   width: 200px;
+  object-fit: contain;
   -webkit-filter: grayscale(0) blur(0px);
   filter: grayscale(0) blur(0px);
   -webkit-transition: all 0.5s ease;
@@ -34,6 +37,7 @@
 .equipe:hover {
   width: 200px;
   height: 200px;
+  object-fit: contain;
   border-radius: 50%;
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
@@ -54,10 +58,55 @@
 .paragraphe {
   display: flex;
   align-items: flex-start;
+  font-family: "Raleway", sans-serif;
   flex-direction: column;
   padding-top: 80px;
   padding-left: 20px;
 }
 .css {
   display: flex;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .news h1 {
+    margin-bottom: 60px;
+    margin-top: -50px;
+    font-size: 30px;
+  }
+  .paragraphe {
+    font-size: 15px;
+  }
+  .remerciements p {
+    font-size: 12px;
+    margin-bottom: -30px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .news h1 {
+    margin-bottom: -50px;
+    margin-top: -50px;
+    font-size: 2.5rem;
+  }
+  .paragraphe p {
+    font-size: 10px;
+    text-justify: auto;
+  }
+  .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .police {
+    font-size: 13px;
+  }
+  .remerciements p {
+    font-size: 10px;
+    margin-bottom: -30px;
+  }
+  .equipe {
+    height: 50px;
+    width: 100px;
+    margin-bottom: -15px;
+  }
 }

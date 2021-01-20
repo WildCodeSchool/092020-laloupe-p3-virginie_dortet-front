@@ -21,15 +21,10 @@
   text-decoration: none;
 }
 .facebook {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .facebook:hover {
-  -webkit-transform: scale(1.5);
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
   transform: scale(1.4);
 }
 .reseausocial {
@@ -37,9 +32,18 @@
   width: 70px;
   margin-top: 15px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 670px) {
   .container {
-    width: 70%;
+    width: 100%;
     font-size: 20px;
+  }
+  .mailcontact {
+    font-size: 17px;
+    padding: 10px;
+  }
+  .reseausocial {
+    height: 70px;
+    width: 70px;
+    padding: 10px;
   }
 }
