@@ -30,7 +30,11 @@ function Admin() {
       setIsLogin(false);
     } else {
       axios
-        .get(`${API_URL}/api/useradmin`)
+        .get(`${API_URL}/api/useradmin`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
         .then((res) => res.data)
         .then(() => {
           setIsLogin(true);
