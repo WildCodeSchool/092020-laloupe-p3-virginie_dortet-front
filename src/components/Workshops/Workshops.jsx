@@ -13,7 +13,6 @@ function Workshops() {
       .get(`${API_URL}/api/images?filter=Atelier`)
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
         setAteliers(data);
       })
       .catch((err) => {

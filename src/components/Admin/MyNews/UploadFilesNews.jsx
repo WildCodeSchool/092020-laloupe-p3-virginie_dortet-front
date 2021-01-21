@@ -5,6 +5,8 @@ import "./MyNews.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
+const token = localStorage.getItem("KALA_TOKEN");
+
 function UploadFilesNews({ setIsOpen }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
@@ -15,11 +17,9 @@ function UploadFilesNews({ setIsOpen }) {
   const [alt, setAlt] = useState("");
 
   const onChangeHandle = (event) => {
-    console.log(event.target.files);
     setSelectedFile(event.target.files[0]);
   };
   const onClickHandle = () => {
-    console.log("file send");
     if (
       selectedFile.type !== "image/jpeg" &&
       selectedFile.type !== "image/jpg" &&
@@ -50,20 +50,27 @@ function UploadFilesNews({ setIsOpen }) {
       );
     } else {
       axios
-        .post(`${API_URL}/api/news`, {
-          Title: title,
-          Description: description,
-          Date: date,
-          Address: address,
-          Image_Name: filename,
-          Alt: alt,
-        })
+        .post(
+          `${API_URL}/api/news`,
+          {
+            Title: title,
+            Description: description,
+            Date: date,
+            Address: address,
+            Image_Name: filename,
+            Alt: alt,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then(() => {
           setIsOpen(false);
         })
         .catch((err) => {
-          console.log();
           alert(err.response.data.errorMessage);
         });
     }

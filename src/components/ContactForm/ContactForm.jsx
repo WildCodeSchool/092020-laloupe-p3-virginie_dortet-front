@@ -32,21 +32,20 @@ const ContactForm = () => {
     if (!mail || !name || !firstname || !message) {
       alert("Merci de remplir tous les champs");
     } else {
-      emailjs
-        .sendForm(
-          "service_2voxb5n",
-          "template_aj5s5o8",
-          e.target,
-          "user_4q5Gk2uw92taCLpWwiYEr"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      emailjs.sendForm(
+        "service_2voxb5n",
+        "template_aj5s5o8",
+        e.target,
+        "user_4q5Gk2uw92taCLpWwiYEr"
+      );
+      // .then(
+      //   (result) => {
+      //     console.log(result.text);
+      //   },
+      //   (error) => {
+      //     console.log(error.text);
+      //   }
+      // );
       alert("Votre Message a été envoyé avec succès !!");
       e.target.reset();
     }

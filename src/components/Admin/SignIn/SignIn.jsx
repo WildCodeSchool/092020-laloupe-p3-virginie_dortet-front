@@ -28,7 +28,6 @@ function SignIn({ setIsLogin }) {
           history.push("/admin/profil");
         })
         .catch((err) => {
-          console.log();
           alert(err.response.data.errorMessage);
         });
     }

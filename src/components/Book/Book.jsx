@@ -14,7 +14,6 @@ function Book() {
       .get(`${API_URL}/api/livres`)
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
         setBooks(data);
       })
       .catch((err) => {
