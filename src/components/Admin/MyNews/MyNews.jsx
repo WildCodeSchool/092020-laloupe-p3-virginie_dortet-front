@@ -9,6 +9,8 @@ function MyNews() {
   const [news, setNews] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
+  const token = localStorage.getItem("KALA_TOKEN");
+
   const openNew = () => {
     setIsOpen(!isOpen);
   };
@@ -18,7 +20,6 @@ function MyNews() {
       .get(`${API_URL}/api/news`)
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
         setNews(data);
       })
       .catch((err) => {
@@ -33,10 +34,13 @@ function MyNews() {
   // Suppress Book
   const deleteNew = (id) => {
     axios
-      .delete(`${API_URL}/api/news/${id}`)
+      .delete(`${API_URL}/api/news/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((res) => res.data)
-      .then((data) => {
-        console.log(data);
+      .then(() => {
         // appeler la fonction pour màj l'affichage
         displayNew();
       })

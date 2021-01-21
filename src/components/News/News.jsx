@@ -13,7 +13,6 @@ function News() {
       .get(`${API_URL}/api/news`)
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
         setNews(data);
       })
       .catch((err) => {

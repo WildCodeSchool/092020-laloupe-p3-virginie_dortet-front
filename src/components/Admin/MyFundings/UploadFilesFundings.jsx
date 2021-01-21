@@ -5,6 +5,8 @@ import "./MyFundings.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
+const token = localStorage.getItem("KALA_TOKEN");
+
 function UploadFilesFundings({ setIsOpen }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
@@ -14,11 +16,9 @@ function UploadFilesFundings({ setIsOpen }) {
   const [Link, setLink] = useState("");
 
   const onChangeHandle = (event) => {
-    console.log(event.target.files);
     setSelectedFile(event.target.files[0]);
   };
   const onClickHandle = () => {
-    console.log("file send");
     if (
       selectedFile.type !== "image/jpeg" &&
       selectedFile.type !== "image/jpg" &&
@@ -49,19 +49,26 @@ function UploadFilesFundings({ setIsOpen }) {
       );
     } else {
       axios
-        .post(`${API_URL}/api/fundings`, {
-          Name: name,
-          Description: description,
-          Image_Name: filename,
-          Alt,
-          Link,
-        })
+        .post(
+          `${API_URL}/api/fundings`,
+          {
+            Name: name,
+            Description: description,
+            Image_Name: filename,
+            Alt,
+            Link,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then(() => {
           setIsOpen(false);
         })
         .catch((err) => {
-          console.log();
           alert(err.response.data.errorMessage);
         });
     }

@@ -22,12 +22,6 @@ function Admin() {
   const { path } = useRouteMatch();
   const [isLogin, setIsLogin] = useState(false);
 
-  // useeffect pour vérifier si le token est valide
-  // route au niveau du back pour vérifier qu'il y a un token et s'il est bon
-  // appel à cette route, isLogin reste à false, si c'est bon passe à false
-  // redirection à /admin/profil
-  // à la destruction du composant, destruction du token localStorage.removeItem
-  // si ya le temps vérification que le token est bon
   const history = useHistory();
 
   useEffect(() => {
@@ -36,11 +30,7 @@ function Admin() {
       setIsLogin(false);
     } else {
       axios
-        .get(`${API_URL}/api/useradmin`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
+        .get(`${API_URL}/api/useradmin`)
         .then((res) => res.data)
         .then(() => {
           setIsLogin(true);
