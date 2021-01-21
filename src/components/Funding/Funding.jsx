@@ -14,7 +14,6 @@ function Funding() {
       .get(`${API_URL}/api/fundings`)
       .then((res) => res.data)
       .then((data) => {
-        console.log(data);
         setFunding(data);
       })
       .catch((err) => {
