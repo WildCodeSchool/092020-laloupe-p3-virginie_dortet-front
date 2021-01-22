@@ -9,8 +9,6 @@ function MyFundings() {
   const [fundings, setFundings] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const token = localStorage.getItem("KALA_TOKEN");
-
   const openFunding = () => {
     setIsOpen(!isOpen);
   };
@@ -34,11 +32,7 @@ function MyFundings() {
   // Suppress Book
   const deleteFunding = (id) => {
     axios
-      .delete(`${API_URL}/api/fundings/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .delete(`${API_URL}/api/fundings/${id}`)
       .then((res) => res.data)
       .then(() => {
         // appeler la fonction pour màj l'affichage
