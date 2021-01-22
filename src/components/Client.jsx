@@ -10,12 +10,14 @@ import Workshops from "./Workshops/Workshops";
 import Preorder from "./Preorder/Preorder";
 import ContactForm from "./ContactForm/ContactForm";
 import Footer from "./Footer/Footer";
+import ScrollToTop from "./ScrollToTop";
 
 function Client() {
   const { path } = useRouteMatch();
 
   return (
     <div>
+      <ScrollToTop />
       <Header />
       <NavBar />
       <Switch>
