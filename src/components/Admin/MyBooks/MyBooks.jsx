@@ -9,8 +9,6 @@ function MyBooks() {
   const [books, setBooks] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const token = localStorage.getItem("KALA_TOKEN");
-
   const openBook = () => {
     setIsOpen(!isOpen);
   };
@@ -34,11 +32,7 @@ function MyBooks() {
   // Suppress Book
   const deleteBook = (BookId) => {
     axios
-      .delete(`${API_URL}/api/livres/${BookId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .delete(`${API_URL}/api/livres/${BookId}`)
       .then((res) => res.data)
       .then(() => {
         displayBook();

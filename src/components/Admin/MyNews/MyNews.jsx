@@ -9,8 +9,6 @@ function MyNews() {
   const [news, setNews] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const token = localStorage.getItem("KALA_TOKEN");
-
   const openNew = () => {
     setIsOpen(!isOpen);
   };
@@ -34,11 +32,7 @@ function MyNews() {
   // Suppress Book
   const deleteNew = (id) => {
     axios
-      .delete(`${API_URL}/api/news/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .delete(`${API_URL}/api/news/${id}`)
       .then((res) => res.data)
       .then(() => {
         // appeler la fonction pour màj l'affichage
