@@ -85,6 +85,15 @@ export default function NavBar() {
           </li>
           <li className="items-nav">
             <Link
+              to="/temoignage"
+              onClick={toggleNavSmallScreen}
+              style={{ textDecoration: "none", color: "#FFE7CB" }}
+            >
+              Témoignages
+            </Link>
+          </li>
+          <li className="items-nav">
+            <Link
               to="/contact"
               onClick={toggleNavSmallScreen}
               style={{ textDecoration: "none", color: "#FFE7CB" }}
