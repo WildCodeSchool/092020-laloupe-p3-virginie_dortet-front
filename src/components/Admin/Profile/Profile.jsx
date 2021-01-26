@@ -39,6 +39,16 @@ function Profile() {
             </li>
           ))}
         </ul>
+        <ul className="list-admin-modif">
+          {users.map((user) => (
+            <li key={user.id}>
+              <h2>Modifier mon Email</h2>
+              <p>{user.Email}</p>
+              <h2>Modifier mot de passe</h2>
+              <p>●●●●●</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
