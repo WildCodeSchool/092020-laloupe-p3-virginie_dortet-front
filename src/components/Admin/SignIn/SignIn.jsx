@@ -58,6 +58,7 @@ function SignIn({ setIsLogin }) {
             onChange={(event) => setPassword(event.target.value)}
           />
         </label>
+        <div className="oublimdp">mot de passe oublié?</div>
         <button type="submit" value="submit">
           Se connecter
         </button>
