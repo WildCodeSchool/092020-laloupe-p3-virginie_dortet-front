@@ -5,6 +5,8 @@ import "./MyNews.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
+const token = localStorage.getItem("KALA_TOKEN");
+
 function MyNews() {
   const [news, setNews] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +34,11 @@ function MyNews() {
   // Suppress Book
   const deleteNew = (id) => {
     axios
-      .delete(`${API_URL}/api/news/${id}`)
+      .delete(`${API_URL}/api/news/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((res) => res.data)
       .then(() => {
         // appeler la fonction pour màj l'affichage

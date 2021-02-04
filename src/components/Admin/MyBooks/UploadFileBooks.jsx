@@ -5,6 +5,8 @@ import "./MyBooks.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
+const token = localStorage.getItem("KALA_TOKEN");
+
 const images = [];
 
 function UploadFileBooks({ setIsOpen }) {
@@ -89,14 +91,22 @@ function UploadFileBooks({ setIsOpen }) {
       );
     } else {
       axios
-        .post(`${API_URL}/api/livres`, {
-          Title: title,
-          Description: description,
-          Price: price,
-          Link: ulule,
-          Publication: date,
-          Images: images,
-        })
+        .post(
+          `${API_URL}/api/livres`,
+          {
+            Title: title,
+            Description: description,
+            Price: price,
+            Link: ulule,
+            Publication: date,
+            Images: images,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then((data) => {
           upLoadImages(data.BookId);
