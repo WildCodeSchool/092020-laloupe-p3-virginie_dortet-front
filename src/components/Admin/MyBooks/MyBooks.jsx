@@ -5,8 +5,6 @@ import "./MyBooks.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-const token = localStorage.getItem("KALA_TOKEN");
-
 function MyBooks() {
   const [books, setBooks] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +31,7 @@ function MyBooks() {
 
   // Suppress Book
   const deleteBook = (BookId) => {
+    const token = localStorage.getItem("KALA_TOKEN");
     axios
       .delete(`${API_URL}/api/livres/${BookId}`, {
         headers: {

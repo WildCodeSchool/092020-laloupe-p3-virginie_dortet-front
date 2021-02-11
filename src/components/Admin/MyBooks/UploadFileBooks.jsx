@@ -5,8 +5,6 @@ import "./MyBooks.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-const token = localStorage.getItem("KALA_TOKEN");
-
 const images = [];
 
 function UploadFileBooks({ setIsOpen }) {
@@ -90,6 +88,7 @@ function UploadFileBooks({ setIsOpen }) {
         "Vous devez renseigner au minimum un titre, une description, un prix et une date de publication"
       );
     } else {
+      const token = localStorage.getItem("KALA_TOKEN");
       axios
         .post(
           `${API_URL}/api/livres`,

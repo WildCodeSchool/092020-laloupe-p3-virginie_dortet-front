@@ -5,8 +5,6 @@ import "./MyWorkshops.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-const token = localStorage.getItem("KALA_TOKEN");
-
 function UploadFileAteliers({ setIsOpen }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
@@ -45,6 +43,7 @@ function UploadFileAteliers({ setIsOpen }) {
     if (!alt || !filename) {
       alert("Vous devez renseigner une image et une description.");
     } else {
+      const token = localStorage.getItem("KALA_TOKEN");
       axios
         .post(
           `${API_URL}/api/images`,

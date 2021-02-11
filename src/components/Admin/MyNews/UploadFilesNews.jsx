@@ -5,8 +5,6 @@ import "./MyNews.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-const token = localStorage.getItem("KALA_TOKEN");
-
 function UploadFilesNews({ setIsOpen }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filename, setFileName] = useState("");
@@ -49,6 +47,7 @@ function UploadFilesNews({ setIsOpen }) {
         "Vous devez renseigner au minimum un titre, une description, une date et une adresse."
       );
     } else {
+      const token = localStorage.getItem("KALA_TOKEN");
       axios
         .post(
           `${API_URL}/api/news`,

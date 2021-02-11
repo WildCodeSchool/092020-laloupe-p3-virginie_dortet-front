@@ -5,8 +5,6 @@ import "./MyFundings.scss";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-const token = localStorage.getItem("KALA_TOKEN");
-
 function MyFundings() {
   const [fundings, setFundings] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +31,7 @@ function MyFundings() {
 
   // Suppress Book
   const deleteFunding = (id) => {
+    const token = localStorage.getItem("KALA_TOKEN");
     axios
       .delete(`${API_URL}/api/fundings/${id}`, {
         headers: {
