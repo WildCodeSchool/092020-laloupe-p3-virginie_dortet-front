@@ -88,15 +88,24 @@ function UploadFileBooks({ setIsOpen }) {
         "Vous devez renseigner au minimum un titre, une description, un prix et une date de publication"
       );
     } else {
+      const token = localStorage.getItem("KALA_TOKEN");
       axios
-        .post(`${API_URL}/api/livres`, {
-          Title: title,
-          Description: description,
-          Price: price,
-          Link: ulule,
-          Publication: date,
-          Images: images,
-        })
+        .post(
+          `${API_URL}/api/livres`,
+          {
+            Title: title,
+            Description: description,
+            Price: price,
+            Link: ulule,
+            Publication: date,
+            Images: images,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then((data) => {
           upLoadImages(data.BookId);

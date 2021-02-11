@@ -1,42 +1,20 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
 import PropTypes from "prop-types";
 import "./SignIn.scss";
 
-const API_URL = process.env.REACT_APP_API_URL;
-
-function SignIn({ setIsLogin }) {
+function SignIn({ handleSubmit }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
 
-  const handleSubmit = (event) => {
+  const submitCredentials = (event) => {
     event.preventDefault();
-    if (!email || !password) {
-      alert("Vous devez renseigner un mot de passe et un email");
-    } else {
-      axios
-        .post(`${API_URL}/api/useradmin/login`, {
-          Email: email,
-          Password: password,
-        })
-        .then((res) => res.data)
-        .then((data) => {
-          localStorage.setItem("KALA_TOKEN", data.token);
-          setIsLogin(true);
-          history.push("/admin/profil");
-        })
-        .catch((err) => {
-          alert(err.response.data.errorMessage);
-        });
-    }
+    handleSubmit(email, password);
   };
 
   return (
     <div className="center-login">
       <h1>Administration Virginie Dortet</h1>
-      <form className="login-fields" onSubmit={handleSubmit}>
+      <form className="login-fields" onSubmit={submitCredentials}>
         <label htmlFor="email">
           Adresse email
           <input
@@ -67,7 +45,7 @@ function SignIn({ setIsLogin }) {
 }
 
 SignIn.propTypes = {
-  setIsLogin: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default SignIn;

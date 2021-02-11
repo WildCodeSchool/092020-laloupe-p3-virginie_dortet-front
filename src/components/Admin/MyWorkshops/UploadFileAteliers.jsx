@@ -43,11 +43,20 @@ function UploadFileAteliers({ setIsOpen }) {
     if (!alt || !filename) {
       alert("Vous devez renseigner une image et une description.");
     } else {
+      const token = localStorage.getItem("KALA_TOKEN");
       axios
-        .post(`${API_URL}/api/images`, {
-          Image_Name: filename,
-          Alt: alt,
-        })
+        .post(
+          `${API_URL}/api/images`,
+          {
+            Image_Name: filename,
+            Alt: alt,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then(() => {
           setIsOpen(false);

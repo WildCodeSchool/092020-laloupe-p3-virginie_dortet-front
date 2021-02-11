@@ -31,8 +31,13 @@ function MyNews() {
 
   // Suppress Book
   const deleteNew = (id) => {
+    const token = localStorage.getItem("KALA_TOKEN");
     axios
-      .delete(`${API_URL}/api/news/${id}`)
+      .delete(`${API_URL}/api/news/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((res) => res.data)
       .then(() => {
         // appeler la fonction pour màj l'affichage

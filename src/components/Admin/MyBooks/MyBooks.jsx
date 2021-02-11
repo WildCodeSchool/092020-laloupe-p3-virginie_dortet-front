@@ -31,8 +31,13 @@ function MyBooks() {
 
   // Suppress Book
   const deleteBook = (BookId) => {
+    const token = localStorage.getItem("KALA_TOKEN");
     axios
-      .delete(`${API_URL}/api/livres/${BookId}`)
+      .delete(`${API_URL}/api/livres/${BookId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((res) => res.data)
       .then(() => {
         displayBook();
