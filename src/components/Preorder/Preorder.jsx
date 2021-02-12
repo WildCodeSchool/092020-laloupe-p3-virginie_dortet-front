@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Preorder.scss";
 import axios from "axios";
 import Arbuste from "../Arbuste/Arbuste";
+import Popup from "../Popup/Popup";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -15,8 +16,7 @@ const Preorder = () => {
   const [cp, setCp] = useState(null);
   const [ville, setVille] = useState(null);
   const [message, setMessage] = useState("");
-
-  // const mailTo = "mailto:" + mail + "?subject=" + name + firstname + "&body=" + message;
+  const [popupState, setPopupState] = useState(false);
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -62,6 +62,8 @@ const Preorder = () => {
     setLivres(temp);
   };
 
+  const [checkRGPD, setCheckRGPD] = useState(false);
+
   const onClickHandle = () => {
     if (
       !clientEmail ||
@@ -70,7 +72,8 @@ const Preorder = () => {
       !phone ||
       !adress ||
       !cp ||
-      !ville
+      !ville ||
+      !checkRGPD
     ) {
       alert("Merci de remplir tous les champs");
     } else {
@@ -267,9 +270,28 @@ const Preorder = () => {
               M'indiquer également si vous souhaitez une dédicace et pour quel
               prénom.
             </p>
-
             <br />
             <br />
+            <div className="rgpd-field">
+              <label htmlFor="checkRGPD">
+                <input
+                  type="checkbox"
+                  onChange={(e) => setCheckRGPD(e.target.value)}
+                  name="checkRGPD"
+                  id="checkRGPD"
+                  required
+                />
+                J'accepte les conditions du{" "}
+                <button
+                  type="button"
+                  className="underline"
+                  onClick={() => setPopupState(!popupState)}
+                  target="_blank"
+                >
+                  RGPD
+                </button>
+              </label>
+            </div>
             <button
               className="envoyerPreorder"
               type="button"
@@ -278,6 +300,7 @@ const Preorder = () => {
               Pré-Commander
             </button>
           </div>
+          {popupState && <Popup closePopup={() => setPopupState(false)} />}
         </form>
       </div>
     </div>
