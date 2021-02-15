@@ -31,8 +31,13 @@ function MyFundings() {
 
   // Suppress Book
   const deleteFunding = (id) => {
+    const token = localStorage.getItem("KALA_TOKEN");
     axios
-      .delete(`${API_URL}/api/fundings/${id}`)
+      .delete(`${API_URL}/api/fundings/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((res) => res.data)
       .then(() => {
         // appeler la fonction pour màj l'affichage

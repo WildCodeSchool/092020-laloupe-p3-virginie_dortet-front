@@ -6,7 +6,6 @@ import {
   useRouteMatch,
   Redirect,
 } from "react-router-dom";
-
 import axios from "axios";
 import TabMenu from "./TabMenu/TabMenu";
 import SignIn from "./SignIn/SignIn";
@@ -21,8 +20,31 @@ const API_URL = process.env.REACT_APP_API_URL;
 function Admin() {
   const { path } = useRouteMatch();
   const [isLogin, setIsLogin] = useState(false);
+  // const [token, setIstoken] = useState(localStorage.getItem(""));
 
   const history = useHistory();
+
+  const handleSubmit = (email, password) => {
+    if (!email || !password) {
+      alert("Vous devez renseigner un mot de passe et un email");
+    } else {
+      axios
+        .post(`${API_URL}/api/useradmin/login`, {
+          Email: email,
+          Password: password,
+        })
+        .then((res) => res.data)
+        .then((data) => {
+          localStorage.setItem("KALA_TOKEN", data.token);
+          setIsLogin(true);
+          // setIstoken(data.token);
+          history.push("/admin/profil");
+        })
+        .catch((err) => {
+          alert(err.response.data.errorMessage);
+        });
+    }
+  };
 
   useEffect(() => {
     const token = localStorage.getItem("KALA_TOKEN");
@@ -35,11 +57,11 @@ function Admin() {
             Authorization: `Bearer ${token}`,
           },
         })
-        .then((res) => res.data)
-        .then(() => {
-          setIsLogin(true);
-          history.push("/admin/profil");
-        })
+        // .then((res) => res.data)
+        // .then(() => {
+        //   setIsLogin(true);
+        //   history.push("/admin/profil");
+        // })
         .catch((err) => {
           setIsLogin(false);
           alert(err.response.data.errorMessage);
@@ -52,7 +74,7 @@ function Admin() {
       {isLogin && <TabMenu setIsLogin={setIsLogin} />}
       <Switch>
         <Route exact path={path}>
-          <SignIn setIsLogin={setIsLogin} />
+          <SignIn handleSubmit={handleSubmit} />
         </Route>
 
         {isLogin ? (

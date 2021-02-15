@@ -46,14 +46,23 @@ function UploadFilesFundings({ setIsOpen }) {
         "Vous devez renseigner au minimum un nom de partenaire, et une description."
       );
     } else {
+      const token = localStorage.getItem("KALA_TOKEN");
       axios
-        .post(`${API_URL}/api/fundings`, {
-          Name: name,
-          Description: description,
-          Image_Name: filename,
-          Alt,
-          Link,
-        })
+        .post(
+          `${API_URL}/api/fundings`,
+          {
+            Name: name,
+            Description: description,
+            Image_Name: filename,
+            Alt,
+            Link,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then(() => {
           setIsOpen(false);

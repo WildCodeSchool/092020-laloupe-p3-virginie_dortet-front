@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import "./ContactForm.scss";
 import emailjs from "emailjs-com";
 import Arbuste from "../Arbuste/Arbuste";
+import Popup from "../Popup/Popup";
 
 const ContactForm = () => {
   const [mail, setMail] = useState(null);
   const [name, setName] = useState(null);
   const [firstname, setFirstName] = useState(null);
   const [message, setMessage] = useState(null);
-  // const mailTo = "mailto:" + mail + "?subject=" + name + firstname + "&body=" + message;
+  const [popupState, setPopupState] = useState(false);
+  const [checkRGPD, setCheckRGPD] = useState(false);
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -26,10 +28,18 @@ const ContactForm = () => {
     setMessage(e.target.value.replace(/\n/g, "%0A"));
   };
 
+  const openPopup = () => {
+    setPopupState(!popupState);
+  };
+
+  const closePopup = () => {
+    setPopupState(false);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!mail || !name || !firstname || !message) {
+    if (!mail || !name || !firstname || !message || !checkRGPD) {
       alert("Merci de remplir tous les champs");
     } else {
       emailjs.sendForm(
@@ -38,14 +48,6 @@ const ContactForm = () => {
         e.target,
         "user_4q5Gk2uw92taCLpWwiYEr"
       );
-      // .then(
-      //   (result) => {
-      //     console.log(result.text);
-      //   },
-      //   (error) => {
-      //     console.log(error.text);
-      //   }
-      // );
       alert("Votre Message a été envoyé avec succès !!");
       e.target.reset();
     }
@@ -99,10 +101,31 @@ const ContactForm = () => {
           />
           <div>
             <br />
+            <div className="rgpd-field">
+              <label htmlFor="checkRGPD">
+                <input
+                  type="checkbox"
+                  onChange={(e) => setCheckRGPD(e.target.value)}
+                  name="checkRGPD"
+                  id="checkRGPD"
+                  required
+                />
+                J'accepte les conditions du{" "}
+                <button
+                  type="button"
+                  className="underline-contact"
+                  onClick={openPopup}
+                  target="_blank"
+                >
+                  RGPD
+                </button>
+              </label>
+            </div>
             <button className="envoyer" type="submit">
               Envoyer
             </button>
           </div>
+          {popupState && <Popup closePopup={closePopup} />}
         </form>
       </div>
     </div>

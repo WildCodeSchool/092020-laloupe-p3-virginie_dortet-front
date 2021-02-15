@@ -47,15 +47,24 @@ function UploadFilesNews({ setIsOpen }) {
         "Vous devez renseigner au minimum un titre, une description, une date et une adresse."
       );
     } else {
+      const token = localStorage.getItem("KALA_TOKEN");
       axios
-        .post(`${API_URL}/api/news`, {
-          Title: title,
-          Description: description,
-          Date: date,
-          Address: address,
-          Image_Name: filename,
-          Alt: alt,
-        })
+        .post(
+          `${API_URL}/api/news`,
+          {
+            Title: title,
+            Description: description,
+            Date: date,
+            Address: address,
+            Image_Name: filename,
+            Alt: alt,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => res.data)
         .then(() => {
           setIsOpen(false);
